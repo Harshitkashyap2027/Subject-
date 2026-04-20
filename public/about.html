@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .team-card { border-radius: 16px; padding: 2rem; text-align: center; }
+    .team-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent)); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; margin: 0 auto 1rem; color: white; }
+    .value-card { border-radius: 16px; padding: 2rem; }
+    @media(max-width:768px){ .team-grid { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="badge badge-primary mb-3">Our Story</div>
+      <h1>We're Building the <span class="gradient-text">Future of Organizations</span></h1>
+      <p>lvlBase was founded on the belief that every organization — from a classroom to a hospital to a government agency — deserves software that works as hard as the people inside it.</p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="reveal">
+        <div>
+          <div class="badge badge-neon mb-3">Our Mission</div>
+          <h2>Why We Built <span class="gradient-text">lvlBase</span></h2>
+          <p style="margin-bottom:1rem;">In 2022, our founders were working across education, healthcare, and corporate sectors and kept running into the same problem: organizations were drowning in disconnected software, manual processes, and data that lived in silos.</p>
+          <p style="margin-bottom:1rem;">Teachers were spending 4 hours a day on administrative tasks instead of teaching. Hospital administrators were manually reconciling data from 6 different systems. HR teams were copy-pasting between spreadsheets and losing talented people as a result.</p>
+          <p>We built lvlBase to change that. One platform. Every role. Every industry. Powered by AI that actually understands your context.</p>
+        </div>
+        <div>
+          <div class="glass" style="border-radius:20px;padding:2.5rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+              <div style="text-align:center;">
+                <div style="font-size:2.5rem;font-weight:900;" class="gradient-text">10K+</div>
+                <div style="color:var(--text-muted);font-size:0.9rem;">Organizations</div>
+              </div>
+              <div style="text-align:center;">
+                <div style="font-size:2.5rem;font-weight:900;" class="gradient-text-neon">50+</div>
+                <div style="color:var(--text-muted);font-size:0.9rem;">Countries</div>
+              </div>
+              <div style="text-align:center;">
+                <div style="font-size:2.5rem;font-weight:900;" class="gradient-text">$50M+</div>
+                <div style="color:var(--text-muted);font-size:0.9rem;">Saved for clients</div>
+              </div>
+              <div style="text-align:center;">
+                <div style="font-size:2.5rem;font-weight:900;" class="gradient-text-neon">4.9★</div>
+                <div style="color:var(--text-muted);font-size:0.9rem;">Average rating</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section" style="background:rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="badge badge-primary mb-3">The Team</div>
+        <h2>Meet the <span class="gradient-text">Founders</span></h2>
+        <p>Four operators who lived the problems lvlBase solves — and decided to build the solution themselves.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card glass reveal reveal-delay-1">
+          <div class="team-avatar">AK</div>
+          <h3 style="font-size:1.1rem;margin-bottom:0.25rem;">Alex Kim</h3>
+          <div style="color:var(--accent-neon);font-size:0.85rem;font-weight:600;margin-bottom:0.75rem;">CEO & Co-Founder</div>
+          <p style="font-size:0.85rem;">Former VP Engineering at Workday. Built enterprise HR systems for Fortune 100 companies for 12 years before founding lvlBase.</p>
+        </div>
+        <div class="team-card glass reveal reveal-delay-2">
+          <div class="team-avatar" style="background:linear-gradient(135deg,var(--accent-neon),var(--accent));">PR</div>
+          <h3 style="font-size:1.1rem;margin-bottom:0.25rem;">Priya Rajan</h3>
+          <div style="color:var(--accent-neon);font-size:0.85rem;font-weight:600;margin-bottom:0.75rem;">CTO & Co-Founder</div>
+          <p style="font-size:0.85rem;">PhD in Machine Learning from MIT. Previously led AI research at Google DeepMind's applied intelligence division.</p>
+        </div>
+        <div class="team-card glass reveal reveal-delay-3">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#10b981,#059669);">JO</div>
+          <h3 style="font-size:1.1rem;margin-bottom:0.25rem;">James Okonkwo</h3>
+          <div style="color:#34d399;font-size:0.85rem;font-weight:600;margin-bottom:0.75rem;">COO & Co-Founder</div>
+          <p style="font-size:0.85rem;">10 years as a hospital administrator. Managed operations for a 2,000-bed health system before joining the founding team.</p>
+        </div>
+        <div class="team-card glass reveal reveal-delay-4">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">SM</div>
+          <h3 style="font-size:1.1rem;margin-bottom:0.25rem;">Sofia Martinez</h3>
+          <div style="color:#fbbf24;font-size:0.85rem;font-weight:600;margin-bottom:0.75rem;">CPO & Co-Founder</div>
+          <p style="font-size:0.85rem;">Former Superintendent of a 15,000-student school district. Brings deep education sector expertise to product design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="badge badge-primary mb-3">Our Values</div>
+        <h2>What We <span class="gradient-text">Stand For</span></h2>
+      </div>
+      <div class="grid-4">
+        <div class="value-card glass reveal reveal-delay-1">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">🔍</div>
+          <h3 style="font-size:1.1rem;margin-bottom:0.75rem;">Transparency</h3>
+          <p style="font-size:0.88rem;">We're honest about what our product can and can't do. No hidden fees, no data selling, no dark patterns — ever.</p>
+        </div>
+        <div class="value-card glass reveal reveal-delay-2">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">💡</div>
+          <h3 style="font-size:1.1rem;margin-bottom:0.75rem;">Innovation</h3>
+          <p style="font-size:0.88rem;">We invest 30% of revenue back into R&D. The Guild System, Skill DNA, and AI Copilot are just the beginning of what we're building.</p>
+        </div>
+        <div class="value-card glass reveal reveal-delay-3">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">🔒</div>
+          <h3 style="font-size:1.1rem;margin-bottom:0.75rem;">Security First</h3>
+          <p style="font-size:0.88rem;">Security isn't a feature — it's a foundation. We achieve and maintain the highest industry compliance certifications as a baseline.</p>
+        </div>
+        <div class="value-card glass reveal reveal-delay-4">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">🌍</div>
+          <h3 style="font-size:1.1rem;margin-bottom:0.75rem;">Inclusivity</h3>
+          <p style="font-size:0.88rem;">40+ language support. Accessible to users with disabilities. Discounted pricing for non-profits and educational institutions worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section reveal">
+    <div class="container">
+      <h2>Join Our <span class="gradient-text">Mission</span></h2>
+      <p style="max-width:500px;margin:1rem auto;">Whether you're a customer, partner, or future team member — we'd love to have you.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;">
+        <a href="./register.html" class="btn btn-primary btn-lg">Get Started Free →</a>
+        <a href="./careers.html" class="btn btn-outline btn-lg">Join Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

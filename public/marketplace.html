@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="badge badge-primary mb-3">App Marketplace</div>
+      <h1>The lvlBase <span class="gradient-text">Marketplace</span></h1>
+      <p>Extend your platform with 200+ vetted apps, integrations, and custom modules built by lvlBase and our developer community.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all" data-target="apps-grid">All Apps</button>
+        <button class="filter-btn" data-filter="productivity" data-target="apps-grid">Productivity</button>
+        <button class="filter-btn" data-filter="communication" data-target="apps-grid">Communication</button>
+        <button class="filter-btn" data-filter="analytics" data-target="apps-grid">Analytics</button>
+        <button class="filter-btn" data-filter="security" data-target="apps-grid">Security</button>
+      </div>
+
+      <div class="integration-grid" id="apps-grid">
+        <div class="app-card glass" data-category="productivity">
+          <div class="app-icon">📋</div>
+          <div class="app-name">Smart Task Manager</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">AI-powered task prioritization and delegation based on Skill DNA profiles.</p>
+          <div class="app-rating">★★★★★ <span style="color:var(--text-muted);">4.9</span></div>
+          <div class="app-installs">12,400 installs</div>
+          <button class="btn btn-outline btn-sm btn-full" style="margin-top:1rem;">Install Free</button>
+        </div>
+        <div class="app-card glass" data-category="communication">
+          <div class="app-icon">📢</div>
+          <div class="app-name">Announcement Pro</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">Rich media announcements with targeting, scheduling, and engagement analytics.</p>
+          <div class="app-rating">★★★★★ <span style="color:var(--text-muted);">4.8</span></div>
+          <div class="app-installs">8,200 installs</div>
+          <button class="btn btn-outline btn-sm btn-full" style="margin-top:1rem;">Install Free</button>
+        </div>
+        <div class="app-card glass" data-category="analytics">
+          <div class="app-icon">📊</div>
+          <div class="app-name">Advanced Reports</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">Custom report builder with 50+ templates, scheduling, and PDF/Excel export.</p>
+          <div class="app-rating">★★★★½ <span style="color:var(--text-muted);">4.6</span></div>
+          <div class="app-installs">15,600 installs</div>
+          <button class="btn btn-primary btn-sm btn-full" style="margin-top:1rem;">$9/mo</button>
+        </div>
+        <div class="app-card glass" data-category="security">
+          <div class="app-icon">🔐</div>
+          <div class="app-name">MFA Enforcer</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">Enforce multi-factor authentication across your entire organization with one click.</p>
+          <div class="app-rating">★★★★★ <span style="color:var(--text-muted);">5.0</span></div>
+          <div class="app-installs">22,100 installs</div>
+          <button class="btn btn-outline btn-sm btn-full" style="margin-top:1rem;">Install Free</button>
+        </div>
+        <div class="app-card glass" data-category="productivity">
+          <div class="app-icon">⚡</div>
+          <div class="app-name">Workflow Templates</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">500+ industry-specific workflow templates ready to deploy in minutes.</p>
+          <div class="app-rating">★★★★★ <span style="color:var(--text-muted);">4.9</span></div>
+          <div class="app-installs">19,300 installs</div>
+          <button class="btn btn-outline btn-sm btn-full" style="margin-top:1rem;">Install Free</button>
+        </div>
+        <div class="app-card glass" data-category="analytics">
+          <div class="app-icon">🎯</div>
+          <div class="app-name">OKR Tracker</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">Set, cascade, and track OKRs from company-level down to individual contributors.</p>
+          <div class="app-rating">★★★★½ <span style="color:var(--text-muted);">4.7</span></div>
+          <div class="app-installs">11,800 installs</div>
+          <button class="btn btn-primary btn-sm btn-full" style="margin-top:1rem;">$12/mo</button>
+        </div>
+        <div class="app-card glass" data-category="communication">
+          <div class="app-icon">🎙️</div>
+          <div class="app-name">Meeting Summarizer</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">AI-powered meeting transcription, summaries, and action item extraction.</p>
+          <div class="app-rating">★★★★★ <span style="color:var(--text-muted);">4.8</span></div>
+          <div class="app-installs">9,400 installs</div>
+          <button class="btn btn-primary btn-sm btn-full" style="margin-top:1rem;">$6/mo</button>
+        </div>
+        <div class="app-card glass" data-category="security">
+          <div class="app-icon">👁️</div>
+          <div class="app-name">Activity Monitor</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">Advanced audit logging with anomaly detection and compliance reporting.</p>
+          <div class="app-rating">★★★★½ <span style="color:var(--text-muted);">4.5</span></div>
+          <div class="app-installs">7,600 installs</div>
+          <button class="btn btn-primary btn-sm btn-full" style="margin-top:1rem;">$15/mo</button>
+        </div>
+        <div class="app-card glass" data-category="productivity">
+          <div class="app-icon">📚</div>
+          <div class="app-name">Learning Catalog</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">Curated library of 10,000+ courses mapped to Skill DNA profiles automatically.</p>
+          <div class="app-rating">★★★★★ <span style="color:var(--text-muted);">4.9</span></div>
+          <div class="app-installs">16,200 installs</div>
+          <button class="btn btn-primary btn-sm btn-full" style="margin-top:1rem;">$20/mo</button>
+        </div>
+        <div class="app-card glass" data-category="analytics">
+          <div class="app-icon">💡</div>
+          <div class="app-name">Sentiment Analyzer</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">Real-time employee sentiment tracking through communication pattern analysis.</p>
+          <div class="app-rating">★★★★½ <span style="color:var(--text-muted);">4.6</span></div>
+          <div class="app-installs">6,900 installs</div>
+          <button class="btn btn-primary btn-sm btn-full" style="margin-top:1rem;">$18/mo</button>
+        </div>
+        <div class="app-card glass" data-category="communication">
+          <div class="app-icon">🌐</div>
+          <div class="app-name">Language Bridge</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">Real-time translation for all communications in 80+ languages.</p>
+          <div class="app-rating">★★★★★ <span style="color:var(--text-muted);">4.9</span></div>
+          <div class="app-installs">13,500 installs</div>
+          <button class="btn btn-primary btn-sm btn-full" style="margin-top:1rem;">$8/mo</button>
+        </div>
+        <div class="app-card glass" data-category="security">
+          <div class="app-icon">🛡️</div>
+          <div class="app-name">Compliance Suite</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);">HIPAA, FERPA, SOC2, and GDPR compliance tracking and documentation automation.</p>
+          <div class="app-rating">★★★★★ <span style="color:var(--text-muted);">5.0</span></div>
+          <div class="app-installs">18,700 installs</div>
+          <button class="btn btn-primary btn-sm btn-full" style="margin-top:1rem;">$25/mo</button>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:3rem;">
+        <p style="margin-bottom:1.5rem;">Build your own app and list it in the marketplace. Earn revenue share on every install.</p>
+        <a href="./developers.html" class="btn btn-primary">Build &amp; List an App →</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

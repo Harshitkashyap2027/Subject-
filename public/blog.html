@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="badge badge-primary mb-3">lvlBase Blog</div>
+      <h1>Latest from <span class="gradient-text">lvlBase</span></h1>
+      <p>Insights, guides, and stories from the world of organizational technology, AI, and human performance.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <!-- Filter tabs -->
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all" data-target="blog-cards">All Posts</button>
+        <button class="filter-btn" data-filter="education" data-target="blog-cards">Education</button>
+        <button class="filter-btn" data-filter="healthcare" data-target="blog-cards">Healthcare</button>
+        <button class="filter-btn" data-filter="corporate" data-target="blog-cards">Corporate</button>
+        <button class="filter-btn" data-filter="government" data-target="blog-cards">Government</button>
+        <button class="filter-btn" data-filter="product" data-target="blog-cards">Product</button>
+        <button class="filter-btn" data-filter="culture" data-target="blog-cards">Culture</button>
+      </div>
+
+      <div class="blog-grid" id="blog-cards">
+        <article class="blog-card glass" data-category="education">
+          <div class="blog-image" style="background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(91,33,182,0.1));">🎓</div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Education</span>
+              <span class="blog-date">January 15, 2025</span>
+            </div>
+            <h3>How AI is Transforming School Administration in 2025</h3>
+            <p class="blog-excerpt">School administrators are spending up to 4 hours daily on tasks that AI can handle in minutes. We explore the 7 most impactful AI applications transforming K-12 operations today.</p>
+            <div class="blog-author">
+              <div class="blog-author-avatar">SM</div>
+              <span>Sofia Martinez · 8 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card glass" data-category="healthcare">
+          <div class="blog-image" style="background:linear-gradient(135deg,rgba(34,211,238,0.15),rgba(6,182,212,0.08));">🏥</div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category" style="background:rgba(34,211,238,0.1);color:var(--accent-neon);">Healthcare</span>
+              <span class="blog-date">January 12, 2025</span>
+            </div>
+            <h3>5 Ways to Reduce Hospital Wait Times with Technology</h3>
+            <p class="blog-excerpt">Long wait times cost hospitals patients, revenue, and reputation. These five technology-driven strategies have helped our healthcare customers cut average wait times by 40%.</p>
+            <div class="blog-author">
+              <div class="blog-author-avatar" style="background:linear-gradient(135deg,var(--accent-neon),var(--accent));">JO</div>
+              <span>James Okonkwo · 6 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card glass" data-category="corporate">
+          <div class="blog-image" style="background:linear-gradient(135deg,rgba(37,99,235,0.2),rgba(59,130,246,0.1));">🏢</div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category" style="background:rgba(37,99,235,0.15);color:#60a5fa;">Corporate</span>
+              <span class="blog-date">January 10, 2025</span>
+            </div>
+            <h3>The Future of Corporate HR: Skills Over Degrees</h3>
+            <p class="blog-excerpt">The shift from credential-based to skills-based hiring is the biggest HR transformation in decades. Here's how forward-thinking companies are using Skill DNA to find and retain top talent.</p>
+            <div class="blog-author">
+              <div class="blog-author-avatar" style="background:linear-gradient(135deg,var(--accent),#7c3aed);">AK</div>
+              <span>Alex Kim · 10 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card glass" data-category="government">
+          <div class="blog-image" style="background:linear-gradient(135deg,rgba(16,185,129,0.15),rgba(5,150,105,0.08));">🏛️</div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category" style="background:rgba(16,185,129,0.1);color:#34d399;">Government</span>
+              <span class="blog-date">January 8, 2025</span>
+            </div>
+            <h3>Building a Digital-First Government Agency in 2025</h3>
+            <p class="blog-excerpt">Citizens expect digital services as seamless as their best consumer apps. This guide shows how government agencies are modernizing without compromising security or compliance.</p>
+            <div class="blog-author">
+              <div class="blog-author-avatar" style="background:linear-gradient(135deg,#10b981,#059669);">PR</div>
+              <span>Priya Rajan · 12 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card glass" data-category="product">
+          <div class="blog-image" style="background:linear-gradient(135deg,rgba(245,158,11,0.15),rgba(217,119,6,0.08));">🧬</div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category" style="background:rgba(245,158,11,0.15);color:#fbbf24;">Product</span>
+              <span class="blog-date">January 5, 2025</span>
+            </div>
+            <h3>Introducing Skill DNA: Your Professional Genome</h3>
+            <p class="blog-excerpt">What if every person had a living map of their professional capabilities — one that updated automatically and powered every career decision? That's exactly what we built with Skill DNA.</p>
+            <div class="blog-author">
+              <div class="blog-author-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">PR</div>
+              <span>Priya Rajan · 15 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card glass" data-category="culture">
+          <div class="blog-image" style="background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(124,58,237,0.1));">⚔️</div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Culture</span>
+              <span class="blog-date">January 2, 2025</span>
+            </div>
+            <h3>Guild Systems: Why Gamification Works in the Workplace</h3>
+            <p class="blog-excerpt">Gaming has solved the engagement problem that companies spend billions trying to fix. Here's the psychology behind Guild Systems and why they drive 3× more voluntary participation than traditional incentives.</p>
+            <div class="blog-author">
+              <div class="blog-author-avatar">AK</div>
+              <span>Alex Kim · 9 min read</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section reveal">
+    <div class="container">
+      <h2>Stay in the <span class="gradient-text">Loop</span></h2>
+      <p style="max-width:500px;margin:1rem auto;">Get our weekly digest of the best organizational tech insights delivered to your inbox.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;margin-top:2rem;max-width:480px;margin-left:auto;margin-right:auto;">
+        <input type="email" class="form-input" placeholder="Your work email" style="flex:1;">
+        <button class="btn btn-primary">Subscribe →</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

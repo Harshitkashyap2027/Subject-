@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <div class="docs-layout" style="padding-top:65px;">
+    <!-- Sidebar -->
+    <aside class="docs-sidebar glass-dark">
+      <div class="docs-nav-section">
+        <div class="docs-nav-title">Getting Started</div>
+        <a class="docs-nav-item active" href="#quick-start">Quick Start Guide</a>
+        <a class="docs-nav-item" href="#installation">Installation</a>
+        <a class="docs-nav-item" href="#configuration">Configuration</a>
+      </div>
+      <div class="docs-nav-section">
+        <div class="docs-nav-title">Authentication</div>
+        <a class="docs-nav-item" href="#auth-overview">Auth Overview</a>
+        <a class="docs-nav-item" href="#sso">SSO Integration</a>
+        <a class="docs-nav-item" href="#oauth">OAuth 2.0</a>
+        <a class="docs-nav-item" href="#api-keys">API Keys</a>
+      </div>
+      <div class="docs-nav-section">
+        <div class="docs-nav-title">Modules</div>
+        <a class="docs-nav-item" href="#people">People Module</a>
+        <a class="docs-nav-item" href="#guilds">Guild System</a>
+        <a class="docs-nav-item" href="#skill-dna">Skill DNA</a>
+        <a class="docs-nav-item" href="#analytics">Analytics</a>
+        <a class="docs-nav-item" href="#ai-assistant">AI Assistant</a>
+        <a class="docs-nav-item" href="#workflows">Workflows</a>
+      </div>
+      <div class="docs-nav-section">
+        <div class="docs-nav-title">API Reference</div>
+        <a class="docs-nav-item" href="#api-users">Users API</a>
+        <a class="docs-nav-item" href="#api-guilds">Guilds API</a>
+        <a class="docs-nav-item" href="#api-analytics">Analytics API</a>
+        <a class="docs-nav-item" href="#api-ai">AI API</a>
+        <a class="docs-nav-item" href="#webhooks">Webhooks</a>
+      </div>
+      <div class="docs-nav-section">
+        <div class="docs-nav-title">Integrations</div>
+        <a class="docs-nav-item" href="#google">Google Workspace</a>
+        <a class="docs-nav-item" href="#microsoft">Microsoft 365</a>
+        <a class="docs-nav-item" href="#slack">Slack</a>
+        <a class="docs-nav-item" href="#zapier">Zapier</a>
+      </div>
+      <div class="docs-nav-section">
+        <div class="docs-nav-title">Troubleshooting</div>
+        <a class="docs-nav-item" href="#errors">Common Errors</a>
+        <a class="docs-nav-item" href="#faq-dev">Developer FAQ</a>
+        <a class="docs-nav-item" href="#support">Get Support</a>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="docs-content">
+      <div id="quick-start">
+        <div class="badge badge-primary mb-3">Getting Started</div>
+        <h2>Quick Start Guide</h2>
+        <p>Welcome to lvlBase! This guide will help you get your organization up and running in under 10 minutes.</p>
+        
+        <h3>Step 1: Create your account</h3>
+        <p>Sign up at <a href="./register.html" style="color:#a78bfa;">lvlbase.io/register</a> and choose your organization type. Your account comes with a 14-day free trial of Pro features.</p>
+
+        <h3>Step 2: Configure your workspace</h3>
+        <p>After signing in, the Setup Wizard will guide you through uploading your org structure, inviting initial users, and configuring your first modules.</p>
+
+        <h3>Step 3: Install the SDK (optional)</h3>
+        <p>For custom integrations, install our JavaScript SDK:</p>
+        <div class="code-block">
+<span class="comment">// Install via npm</span>
+npm install @lvlbase/sdk
+
+<span class="comment">// Or via CDN</span>
+&lt;script src="https://cdn.lvlbase.io/sdk/v2.js"&gt;&lt;/script&gt;
+        </div>
+
+        <h3>Step 4: Initialize the SDK</h3>
+        <div class="code-block">
+<span class="keyword">import</span> { LvlBase } <span class="keyword">from</span> <span class="string">'@lvlbase/sdk'</span>;
+
+<span class="keyword">const</span> client = <span class="keyword">new</span> <span class="function">LvlBase</span>({
+  apiKey: <span class="string">'YOUR_API_KEY'</span>,
+  orgId: <span class="string">'YOUR_ORG_ID'</span>,
+  environment: <span class="string">'production'</span>
+});
+
+<span class="comment">// Test the connection</span>
+<span class="keyword">const</span> status = <span class="keyword">await</span> client.<span class="function">ping</span>();
+console.<span class="function">log</span>(status); <span class="comment">// { status: 'ok', latency: 24 }</span>
+        </div>
+      </div>
+
+      <hr style="border-color:var(--glass-border);margin:3rem 0;">
+
+      <div id="auth-overview">
+        <div class="badge badge-neon mb-3">Authentication</div>
+        <h2>Authentication Overview</h2>
+        <p>lvlBase supports multiple authentication methods to fit your organization's security requirements.</p>
+
+        <h3>Supported Methods</h3>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.5rem 0;">
+          <div class="glass" style="padding:1rem;border-radius:10px;"><strong>Email/Password</strong><br><span style="font-size:0.85rem;color:var(--text-muted);">Standard email and password authentication with MFA support.</span></div>
+          <div class="glass" style="padding:1rem;border-radius:10px;"><strong>Google OAuth</strong><br><span style="font-size:0.85rem;color:var(--text-muted);">Single-click login with Google accounts via OAuth 2.0.</span></div>
+          <div class="glass" style="padding:1rem;border-radius:10px;"><strong>SAML 2.0 SSO</strong><br><span style="font-size:0.85rem;color:var(--text-muted);">Enterprise SSO with Okta, Azure AD, OneLogin, and more.</span></div>
+          <div class="glass" style="padding:1rem;border-radius:10px;"><strong>API Keys</strong><br><span style="font-size:0.85rem;color:var(--text-muted);">Secure API keys for service-to-service authentication.</span></div>
+        </div>
+
+        <h3>API Authentication Example</h3>
+        <div class="code-block">
+<span class="comment">// All API requests require an Authorization header</span>
+<span class="function">fetch</span>(<span class="string">'https://api.lvlbase.io/v2/users'</span>, {
+  headers: {
+    <span class="string">'Authorization'</span>: <span class="string">`Bearer YOUR_API_KEY`</span>,
+    <span class="string">'Content-Type'</span>: <span class="string">'application/json'</span>,
+    <span class="string">'X-Org-ID'</span>: <span class="string">'YOUR_ORG_ID'</span>
+  }
+})
+.<span class="function">then</span>(res => res.<span class="function">json</span>())
+.<span class="function">then</span>(data => console.<span class="function">log</span>(data));
+        </div>
+      </div>
+
+      <hr style="border-color:var(--glass-border);margin:3rem 0;">
+
+      <div id="api-users">
+        <div class="badge badge-success mb-3">API Reference</div>
+        <h2>Users API</h2>
+        <p>The Users API allows you to manage organization members programmatically.</p>
+
+        <h3>List Users</h3>
+        <div class="code-block">
+<span class="comment">GET /v2/users</span>
+
+<span class="comment">// Response</span>
+{
+  <span class="string">"users"</span>: [
+    {
+      <span class="string">"id"</span>: <span class="string">"usr_abc123"</span>,
+      <span class="string">"name"</span>: <span class="string">"Jane Smith"</span>,
+      <span class="string">"email"</span>: <span class="string">"jane@org.com"</span>,
+      <span class="string">"role"</span>: <span class="string">"manager"</span>,
+      <span class="string">"skillDNA"</span>: { <span class="string">"level"</span>: 7, <span class="string">"topSkills"</span>: [<span class="string">"leadership"</span>, <span class="string">"data-analysis"</span>] },
+      <span class="string">"guild"</span>: <span class="string">"Alpha Squad"</span>
+    }
+  ],
+  <span class="string">"total"</span>: 2847,
+  <span class="string">"page"</span>: 1
+}
+        </div>
+
+        <h3>Create User</h3>
+        <div class="code-block">
+<span class="comment">POST /v2/users</span>
+
+{
+  <span class="string">"name"</span>: <span class="string">"John Doe"</span>,
+  <span class="string">"email"</span>: <span class="string">"john@org.com"</span>,
+  <span class="string">"role"</span>: <span class="string">"employee"</span>,
+  <span class="string">"department"</span>: <span class="string">"Engineering"</span>,
+  <span class="string">"sendInvite"</span>: <span class="keyword">true</span>
+}
+        </div>
+      </div>
+
+      <hr style="border-color:var(--glass-border);margin:3rem 0;">
+
+      <div id="webhooks">
+        <h2>Webhooks</h2>
+        <p>lvlBase can send real-time webhook notifications to your endpoints when key events occur in your organization.</p>
+
+        <h3>Available Events</h3>
+        <div class="code-block">
+user.created          <span class="comment">// New user joined</span>
+user.skill_updated    <span class="comment">// Skill DNA profile changed</span>
+guild.level_up        <span class="comment">// Guild reached new level</span>
+workflow.triggered    <span class="comment">// Automation workflow fired</span>
+report.generated      <span class="comment">// Scheduled report ready</span>
+ai.insight_ready      <span class="comment">// New AI insight available</span>
+        </div>
+
+        <h3>Webhook Payload Example</h3>
+        <div class="code-block">
+{
+  <span class="string">"event"</span>: <span class="string">"guild.level_up"</span>,
+  <span class="string">"timestamp"</span>: <span class="string">"2025-01-15T14:32:00Z"</span>,
+  <span class="string">"orgId"</span>: <span class="string">"org_xyz789"</span>,
+  <span class="string">"data"</span>: {
+    <span class="string">"guildId"</span>: <span class="string">"guild_alpha"</span>,
+    <span class="string">"guildName"</span>: <span class="string">"Alpha Squad"</span>,
+    <span class="string">"newLevel"</span>: 5,
+    <span class="string">"totalXP"</span>: 12400
+  }
+}
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

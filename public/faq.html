@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="badge badge-primary mb-3">FAQ</div>
+      <h1>Frequently Asked <span class="gradient-text">Questions</span></h1>
+      <p>Everything you need to know about lvlBase. Can't find your answer? <a href="./contact.html" style="color:#a78bfa;">Contact our team →</a></p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <!-- Category filters -->
+      <div class="filter-group" id="faq-filters">
+        <button class="filter-btn active" data-filter="all" data-target="faq-items">All Questions</button>
+        <button class="filter-btn" data-filter="general" data-target="faq-items">General</button>
+        <button class="filter-btn" data-filter="features" data-target="faq-items">Features</button>
+        <button class="filter-btn" data-filter="security" data-target="faq-items">Security</button>
+        <button class="filter-btn" data-filter="pricing" data-target="faq-items">Pricing</button>
+      </div>
+
+      <div class="faq-list" id="faq-items">
+        <div class="faq-item glass" data-category="general">
+          <button class="faq-question">What is lvlBase and who is it for? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>lvlBase is an all-in-one organizational management platform designed for education institutions, healthcare organizations, corporations, and government agencies. It replaces multiple disconnected tools with one unified platform featuring AI assistance, Guild systems, Skill DNA, and advanced analytics.</p></div>
+        </div>
+        <div class="faq-item glass" data-category="general">
+          <button class="faq-question">How long does implementation take? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Most organizations are up and running within 48 hours. We provide a guided onboarding wizard, bulk data import tools, pre-built templates for your industry, and a dedicated customer success manager on Pro and Enterprise plans.</p></div>
+        </div>
+        <div class="faq-item glass" data-category="features">
+          <button class="faq-question">How does the AI Assistant work? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Our AI Assistant is built on large language models fine-tuned for organizational management. It has context-aware access to your organization's data (with appropriate permissions) and can answer questions, generate reports, summarize meetings, draft communications, and automate routine tasks — all in natural language.</p></div>
+        </div>
+        <div class="faq-item glass" data-category="features">
+          <button class="faq-question">What is the Guild System? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>The Guild System is lvlBase's proprietary team collaboration engine inspired by gaming mechanics. Teams self-organize into guilds, earn XP through collective achievements, compete on leaderboards, and unlock rewards. Studies of our customers show it drives 3× more voluntary engagement than traditional incentive programs.</p></div>
+        </div>
+        <div class="faq-item glass" data-category="features">
+          <button class="faq-question">What is Skill DNA? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Skill DNA is a living profile of each person's capabilities, learning velocity, and career trajectory. Our AI automatically infers skills from activity, allows peer endorsements, and generates personalized learning paths and career recommendations. It's like a professional genome that evolves as people grow.</p></div>
+        </div>
+        <div class="faq-item glass" data-category="security">
+          <button class="faq-question">Is my data secure and compliant? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes. lvlBase maintains SOC 2 Type II certification, is HIPAA compliant for healthcare, FERPA compliant for education, and GDPR compliant for EU users. We use 256-bit AES encryption at rest and TLS 1.3 in transit. Enterprise customers can opt for dedicated infrastructure and on-premise deployment.</p></div>
+        </div>
+        <div class="faq-item glass" data-category="security">
+          <button class="faq-question">Who can see our organization's data? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Your data is yours. lvlBase employees cannot access your organization's data without explicit permission granted during a support session. We never sell, share, or use your data to train AI models without consent. Full audit logs are available for all Enterprise customers.</p></div>
+        </div>
+        <div class="faq-item glass" data-category="pricing">
+          <button class="faq-question">What happens after the free trial ends? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>After your 14-day Pro trial, you can choose to subscribe or downgrade to our free tier (up to 25 users). Your data is never deleted — you have full export capabilities at any time regardless of plan status.</p></div>
+        </div>
+        <div class="faq-item glass" data-category="pricing">
+          <button class="faq-question">Do you offer discounts for non-profits and education? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Absolutely. We offer 50% off all paid plans for verified non-profit organizations and educational institutions. Contact our team with your 501(c)(3) documentation or institutional email domain for verification.</p></div>
+        </div>
+        <div class="faq-item glass" data-category="general">
+          <button class="faq-question">Is there a mobile app? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes! lvlBase has native iOS and Android apps with full feature parity to the web platform. Features include push notifications, offline mode for key features, biometric authentication, and optimized mobile layouts for all major workflows.</p></div>
+        </div>
+        <div class="faq-item glass" data-category="general">
+          <button class="faq-question">Can we migrate data from existing systems? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes. We support automated data migration from Google Workspace, Microsoft 365, Salesforce, Workday, Blackboard, Canvas, Banner, and dozens more. Our migration wizard handles the entire process with full data integrity verification.</p></div>
+        </div>
+        <div class="faq-item glass" data-category="features">
+          <button class="faq-question">Can we customize lvlBase for our brand? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Pro and Enterprise plans support full white-labeling — your logo, colors, custom domain, and email templates. Enterprise customers can additionally customize AI behaviors, workflow templates, and reporting formats to match their exact specifications.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section reveal">
+    <div class="container">
+      <h2>Still Have <span class="gradient-text">Questions?</span></h2>
+      <p style="max-width:500px;margin:1rem auto;">Our team is here to help. Reach out and we'll get back to you within 24 hours.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;">
+        <a href="./contact.html" class="btn btn-primary btn-lg">Contact Support →</a>
+        <a href="./docs.html" class="btn btn-outline btn-lg">Read the Docs</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

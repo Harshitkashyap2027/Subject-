@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="badge badge-success mb-3">● Support Center</div>
+      <h1>How Can We <span class="gradient-text">Help?</span></h1>
+      <p>Search our documentation, browse community answers, or reach out to our team directly. We're here for you.</p>
+      <div style="max-width:500px;margin:2rem auto 0;display:flex;gap:0.75rem;">
+        <input type="text" class="form-input" placeholder="Search documentation, FAQs, guides...">
+        <button class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <!-- Support options -->
+      <div class="grid-3 mb-6">
+        <div class="feature-card glass reveal reveal-delay-1" style="text-align:center;cursor:pointer;" onclick="window.location.href='./docs.html'">
+          <span class="feature-icon" style="font-size:3rem;">📚</span>
+          <h3>Documentation</h3>
+          <p>Comprehensive guides, tutorials, and API references for every feature in lvlBase.</p>
+          <a href="./docs.html" class="btn btn-outline btn-sm mt-2" style="margin-top:1rem;">Browse Docs →</a>
+        </div>
+        <div class="feature-card glass reveal reveal-delay-2" style="text-align:center;">
+          <span class="feature-icon" style="font-size:3rem;">💬</span>
+          <h3>Community Forum</h3>
+          <p>Connect with 10,000+ lvlBase administrators, share best practices, and get answers from experienced users.</p>
+          <a href="#" class="btn btn-outline btn-sm mt-2" style="margin-top:1rem;">Visit Forum →</a>
+        </div>
+        <div class="feature-card glass reveal reveal-delay-3" style="text-align:center;">
+          <span class="feature-icon" style="font-size:3rem;">🎧</span>
+          <h3>Contact Support</h3>
+          <p>Reach our support team via email, chat, or phone. Enterprise customers get 24/7 dedicated support.</p>
+          <a href="./contact.html" class="btn btn-primary btn-sm mt-2" style="margin-top:1rem;">Get Support →</a>
+        </div>
+      </div>
+
+      <!-- Quick FAQ links -->
+      <div class="section-header reveal">
+        <h2>Common <span class="gradient-text">Questions</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item glass reveal">
+          <button class="faq-question">How do I reset my password? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Go to the <a href="./forgot-password.html" style="color:#a78bfa;">Forgot Password page</a>, enter your email address, and click "Send Reset Link." You'll receive an email within 2 minutes with a secure link to create a new password. The link expires after 1 hour.</p></div>
+        </div>
+        <div class="faq-item glass reveal">
+          <button class="faq-question">How do I invite team members? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>In your dashboard, navigate to People → Members → Invite. You can invite individuals by email or do a bulk import using a CSV file. Invited users will receive an email with a secure onboarding link that expires after 7 days.</p></div>
+        </div>
+        <div class="faq-item glass reveal">
+          <button class="faq-question">How do I connect Google Workspace? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Go to Settings → Integrations → Google Workspace, then click "Connect." You'll be redirected to Google's OAuth screen to authorize lvlBase. You need to be a Google Workspace admin to complete this integration.</p></div>
+        </div>
+        <div class="faq-item glass reveal">
+          <button class="faq-question">How do I export my organization's data? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Go to Settings → Data Management → Export. You can export all data as CSV or JSON. Enterprise customers can also set up automated data exports to S3, GCS, or Azure Blob Storage on a schedule.</p></div>
+        </div>
+        <div class="faq-item glass reveal">
+          <button class="faq-question">What are the system requirements? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>lvlBase runs entirely in the browser — no installation required. We support the latest versions of Chrome, Firefox, Safari, and Edge. For the mobile app, we require iOS 14+ or Android 9+. Minimum bandwidth recommendation: 5 Mbps for optimal performance.</p></div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:2.5rem;">
+        <a href="./faq.html" class="btn btn-outline">View All FAQs →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Status section -->
+  <section class="section" style="background:rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>System <span class="gradient-text">Status</span></h2>
+      </div>
+      <div class="glass" style="border-radius:16px;padding:2rem;max-width:600px;margin:0 auto;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;">
+          <h3 style="font-size:1rem;">Current Status</h3>
+          <div class="status-dot">All Systems Operational</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--glass-border);"><span style="font-size:0.9rem;">API</span><span class="badge badge-success">● Operational</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--glass-border);"><span style="font-size:0.9rem;">Web App</span><span class="badge badge-success">● Operational</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--glass-border);"><span style="font-size:0.9rem;">Mobile Apps</span><span class="badge badge-success">● Operational</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--glass-border);"><span style="font-size:0.9rem;">AI Services</span><span class="badge badge-success">● Operational</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;"><span style="font-size:0.9rem;">Authentication</span><span class="badge badge-success">● Operational</span></div>
+        </div>
+        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--glass-border);font-size:0.82rem;color:var(--text-muted);">99.99% uptime over the last 90 days. <a href="#" style="color:#a78bfa;">View full status history →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

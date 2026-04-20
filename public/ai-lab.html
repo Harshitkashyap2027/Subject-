@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Lab – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .ai-feature-card { border-radius: 20px; padding: 2.5rem; transition: all 0.3s ease; }
+    .ai-feature-card:hover { transform: translateY(-5px); }
+    .typing-cursor { display: inline-block; width: 2px; height: 1em; background: var(--accent-neon); animation: blink 1s step-end infinite; vertical-align: text-bottom; margin-left: 2px; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  </style>
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero" style="background:linear-gradient(135deg,rgba(34,211,238,0.08),rgba(124,58,237,0.1));">
+    <div class="container">
+      <div class="badge badge-neon mb-3" style="animation: pulse-glow 2s ease-in-out infinite;">🧪 AI Lab — Experimental</div>
+      <h1><span class="gradient-text-neon">AI Lab</span></h1>
+      <p>Where the future of organizational intelligence is being built. Explore our most advanced AI capabilities — some in production, some coming soon.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;">
+        <a href="./register.html" class="btn btn-neon btn-lg">Access AI Lab →</a>
+        <a href="./demo.html" class="btn btn-outline btn-lg">Watch AI Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <!-- 3 AI Features -->
+      <div class="grid-3 mb-6">
+        <div class="ai-feature-card glass neon-border reveal reveal-delay-1">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">💬</div>
+          <h3 class="gradient-text-neon">Natural Language Interface</h3>
+          <p style="margin-bottom:1rem;">Ask anything about your organization in plain English. No dashboards to navigate, no reports to run — just ask.</p>
+          <ul class="feature-detail">
+            <li>"How many employees completed compliance training this month?"</li>
+            <li>"Which department has the highest turnover risk?"</li>
+            <li>"Generate a performance summary for Q4."</li>
+            <li>"Who are the top 5 candidates for promotion?"</li>
+          </ul>
+          <div class="badge badge-success mt-4" style="margin-top:1rem;">✓ Available Now</div>
+        </div>
+        <div class="ai-feature-card glass reveal reveal-delay-2" style="border:1px solid rgba(124,58,237,0.3);">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">🔮</div>
+          <h3 class="gradient-text">Predictive Analytics</h3>
+          <p style="margin-bottom:1rem;">Our AI doesn't just report on the past — it predicts the future. Know what's going to happen before it does.</p>
+          <ul class="feature-detail">
+            <li>Employee attrition risk scoring (90-day horizon)</li>
+            <li>Budget variance forecasting</li>
+            <li>Learning completion probability</li>
+            <li>Team performance trend prediction</li>
+          </ul>
+          <div class="badge badge-success mt-4" style="margin-top:1rem;">✓ Available Now</div>
+        </div>
+        <div class="ai-feature-card glass reveal reveal-delay-3" style="border:1px solid rgba(245,158,11,0.2);">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">⚗️</div>
+          <h3 style="background:linear-gradient(135deg,#fbbf24,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Automated Insights Engine</h3>
+          <p style="margin-bottom:1rem;">Instead of waiting for you to ask, our AI proactively surfaces insights you didn't know you needed.</p>
+          <ul class="feature-detail">
+            <li>Daily digest of key organizational signals</li>
+            <li>Anomaly detection with root cause analysis</li>
+            <li>Opportunity identification and recommendations</li>
+            <li>Risk alerts before problems become crises</li>
+          </ul>
+          <div class="badge badge-primary mt-4" style="margin-top:1rem;">🚧 Beta</div>
+        </div>
+      </div>
+
+      <!-- Interactive Demo Window -->
+      <div class="section-header reveal">
+        <div class="badge badge-neon mb-3">Try It Now</div>
+        <h2>AI Assistant <span class="gradient-text-neon">Demo</span></h2>
+        <p>See how our AI responds to real organizational questions in real time.</p>
+      </div>
+
+      <div class="ai-demo-window glass neon-border reveal" style="max-width:700px;margin:0 auto;">
+        <div class="ai-window-bar">
+          <div class="window-dot dot-red"></div>
+          <div class="window-dot dot-yellow"></div>
+          <div class="window-dot dot-green"></div>
+          <span style="font-size:0.8rem;color:var(--text-muted);margin-left:0.75rem;">lvlBase AI Copilot</span>
+          <span class="badge badge-success" style="margin-left:auto;font-size:0.7rem;padding:0.2rem 0.6rem;">● Connected</span>
+        </div>
+        <div class="ai-window-content">
+          <div class="ai-prompt-line">
+            <span class="ai-prompt-role role-user">You</span>
+            <span class="ai-prompt-text">Which departments have the lowest engagement this month and what do you recommend?</span>
+          </div>
+          <div class="ai-prompt-line">
+            <span class="ai-prompt-role role-ai">AI</span>
+            <span class="ai-prompt-text">Based on activity data from the last 30 days, I've identified 3 departments with engagement below your org average of 78%:<br><br>
+            📉 <strong>Finance</strong> — 61% (↓12% from last month). Possible factor: Q4 audit stress.<br>
+            📉 <strong>Customer Support</strong> — 65% (↓8%). High ticket volume + no recognition program.<br>
+            📉 <strong>Legal</strong> — 67% (↓5%). Limited participation in Guild activities.<br><br>
+            💡 <strong>My top 3 recommendations:</strong><br>
+            1. Launch a Guild challenge specifically for Finance and Support teams (projected +18% engagement lift)<br>
+            2. Enable automated recognition badges for high-performing Support agents<br>
+            3. Schedule a "Legal &amp; AI" learning module — Legal has high interest scores in tech upskilling<br><br>
+            Want me to draft the Guild challenge and send invites to the team leads?</span>
+          </div>
+          <div class="ai-prompt-line" style="margin-top:1rem;">
+            <input type="text" class="form-input" placeholder="Ask anything about your organization..." style="font-size:0.875rem;">
+            <button class="btn btn-neon btn-sm" style="white-space:nowrap;margin-left:0.5rem;" onclick="this.previousElementSibling.value=''; alert('Connect your Firebase project and organization to use live AI features!')">Ask AI →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coming soon features -->
+      <div style="margin-top:5rem;">
+        <div class="section-header reveal">
+          <div class="badge badge-primary mb-3">🔭 Coming Soon</div>
+          <h2>On the <span class="gradient-text">Horizon</span></h2>
+          <p>Features our AI team is actively building in the Lab.</p>
+        </div>
+        <div class="grid-4">
+          <div class="glass" style="border-radius:16px;padding:1.5rem;text-align:center;" class="reveal">
+            <div style="font-size:2rem;margin-bottom:0.75rem;">🎯</div>
+            <h4 style="font-size:0.95rem;">Autonomous Workflows</h4>
+            <p style="font-size:0.82rem;">AI agents that complete multi-step tasks end-to-end without human intervention.</p>
+            <span class="badge badge-primary" style="margin-top:0.75rem;">Q2 2025</span>
+          </div>
+          <div class="glass" style="border-radius:16px;padding:1.5rem;text-align:center;" class="reveal">
+            <div style="font-size:2rem;margin-bottom:0.75rem;">🧠</div>
+            <h4 style="font-size:0.95rem;">Org Memory</h4>
+            <p style="font-size:0.82rem;">AI that remembers every meeting, decision, and context from your organization's history.</p>
+            <span class="badge badge-primary" style="margin-top:0.75rem;">Q2 2025</span>
+          </div>
+          <div class="glass" style="border-radius:16px;padding:1.5rem;text-align:center;" class="reveal">
+            <div style="font-size:2rem;margin-bottom:0.75rem;">🎤</div>
+            <h4 style="font-size:0.95rem;">Voice Interface</h4>
+            <p style="font-size:0.82rem;">Talk to your organizational AI directly. Full voice-activated dashboard and reporting.</p>
+            <span class="badge badge-primary" style="margin-top:0.75rem;">Q3 2025</span>
+          </div>
+          <div class="glass" style="border-radius:16px;padding:1.5rem;text-align:center;" class="reveal">
+            <div style="font-size:2rem;margin-bottom:0.75rem;">🤝</div>
+            <h4 style="font-size:0.95rem;">AI Mediator</h4>
+            <p style="font-size:0.82rem;">AI-powered conflict resolution and team dynamics optimization for managers.</p>
+            <span class="badge badge-primary" style="margin-top:0.75rem;">Q4 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

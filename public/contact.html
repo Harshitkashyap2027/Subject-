@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="badge badge-primary mb-3">Contact Us</div>
+      <h1>Get in <span class="gradient-text">Touch</span></h1>
+      <p>Have questions? Want a demo? Ready to get started? We'd love to hear from you. Our team responds within 24 hours.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:start;">
+        <!-- Contact info -->
+        <div>
+          <h3 style="margin-bottom:2rem;">Contact Information</h3>
+          <div style="display:flex;flex-direction:column;gap:1.5rem;">
+            <div class="glass" style="padding:1.25rem;border-radius:12px;display:flex;gap:1rem;align-items:flex-start;">
+              <span style="font-size:1.5rem;">📧</span>
+              <div>
+                <div style="font-weight:700;margin-bottom:0.25rem;">Email</div>
+                <div style="color:var(--text-muted);font-size:0.9rem;">hello@lvlbase.io</div>
+                <div style="color:var(--text-muted);font-size:0.9rem;">support@lvlbase.io</div>
+              </div>
+            </div>
+            <div class="glass" style="padding:1.25rem;border-radius:12px;display:flex;gap:1rem;align-items:flex-start;">
+              <span style="font-size:1.5rem;">📞</span>
+              <div>
+                <div style="font-weight:700;margin-bottom:0.25rem;">Phone</div>
+                <div style="color:var(--text-muted);font-size:0.9rem;">+1 (888) 585-2273</div>
+                <div style="color:var(--text-muted);font-size:0.75rem;">Mon–Fri 9am–6pm EST</div>
+              </div>
+            </div>
+            <div class="glass" style="padding:1.25rem;border-radius:12px;display:flex;gap:1rem;align-items:flex-start;">
+              <span style="font-size:1.5rem;">📍</span>
+              <div>
+                <div style="font-weight:700;margin-bottom:0.25rem;">Office</div>
+                <div style="color:var(--text-muted);font-size:0.9rem;">340 Pine Street, Suite 1200</div>
+                <div style="color:var(--text-muted);font-size:0.9rem;">San Francisco, CA 94104</div>
+              </div>
+            </div>
+            <div class="glass" style="padding:1.25rem;border-radius:12px;display:flex;gap:1rem;align-items:flex-start;">
+              <span style="font-size:1.5rem;">💬</span>
+              <div>
+                <div style="font-weight:700;margin-bottom:0.25rem;">Live Chat</div>
+                <div style="color:var(--text-muted);font-size:0.9rem;">Available in-app for Pro and Enterprise customers.</div>
+                <div style="margin-top:0.5rem;"><span class="badge badge-success">● Online Now</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="glass" style="border-radius:20px;padding:2.5rem;">
+          <h3 style="margin-bottom:1.5rem;">Send us a Message</h3>
+          <div id="contact-alert" class="alert"></div>
+          <form id="contact-form">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <div class="form-group">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-input" placeholder="Jane Smith">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-input" placeholder="jane@org.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Organization</label>
+              <input type="text" class="form-input" placeholder="Your organization name">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <select class="form-select">
+                <option value="">Select a subject</option>
+                <option>Sales inquiry</option>
+                <option>Technical support</option>
+                <option>Partnership opportunity</option>
+                <option>Demo request</option>
+                <option>Billing question</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-textarea" placeholder="Tell us how we can help your organization..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const alert = document.getElementById('contact-alert');
+      alert.textContent = "Message sent! We'll be in touch within 24 hours.";
+      alert.className = 'alert alert-success show';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
