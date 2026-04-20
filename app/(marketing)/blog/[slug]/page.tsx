@@ -3,14 +3,15 @@ import SectionWrapper from '@/components/shared/SectionWrapper'
 import { blogPosts } from '@/lib/data/blog'
 import { formatDate } from '@/lib/utils'
 
-interface Props { params: { slug: string } }
+interface Props { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }))
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = blogPosts.find((p) => p.slug === params.slug)
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params
+  const post = blogPosts.find((p) => p.slug === slug)
   if (!post) notFound()
   return (
     <div>

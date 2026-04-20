@@ -4,15 +4,16 @@ import SectionWrapper from '@/components/shared/SectionWrapper'
 import { features } from '@/lib/data/features'
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export function generateStaticParams() {
   return features.map((f) => ({ slug: f.slug }))
 }
 
-export default function FeaturePage({ params }: Props) {
-  const feature = features.find((f) => f.slug === params.slug)
+export default async function FeaturePage({ params }: Props) {
+  const { slug } = await params
+  const feature = features.find((f) => f.slug === slug)
   if (!feature) notFound()
 
   return (
