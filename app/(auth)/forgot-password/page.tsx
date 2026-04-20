@@ -7,6 +7,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Zap, Mail, ArrowRight, CheckCircle2, ArrowLeft } from 'lucide-react'
 
+const MOCK_NETWORK_DELAY = 900
+
 const schema = z.object({ email: z.string().email('Enter a valid email address') })
 type FormData = z.infer<typeof schema>
 
@@ -23,7 +25,7 @@ export default function ForgotPasswordPage() {
     try {
       // TODO: Firebase Auth – sendPasswordResetEmail(auth, data.email)
       console.log('Password reset for:', data.email)
-      await new Promise((r) => setTimeout(r, 900))
+      await new Promise((r) => setTimeout(r, MOCK_NETWORK_DELAY))
     } finally {
       setIsLoading(false)
     }

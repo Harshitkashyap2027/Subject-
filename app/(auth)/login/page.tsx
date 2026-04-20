@@ -19,6 +19,8 @@ import {
   CheckCircle2,
 } from 'lucide-react'
 
+const MOCK_NETWORK_DELAY = 1000
+
 const schema = z.object({
   email: z.string().email('Enter a valid email'),
   password: z.string().min(8, 'Min 8 characters'),
@@ -61,7 +63,7 @@ export default function LoginPage() {
       // 3. verify data.orgId matches user's orgId
       // 4. redirect to ROLE_REDIRECTS[role]
       console.log('Login payload:', data)
-      await new Promise((r) => setTimeout(r, 1000)) // simulate network
+      await new Promise((r) => setTimeout(r, MOCK_NETWORK_DELAY))
       setLoginSuccess(true)
       const role = 'student' // placeholder – replace with real role
       window.location.href = ROLE_REDIRECTS[role] ?? '/dashboard'
@@ -165,7 +167,7 @@ export default function LoginPage() {
                     <div className="w-full border-t border-white/10" />
                   </div>
                   <div className="relative flex justify-center">
-                    <span className="bg-[#0f172a] px-4 text-slate-500 text-xs">or continue with email</span>
+                    <span className="bg-slate-900 px-4 text-slate-500 text-xs">or continue with email</span>
                   </div>
                 </div>
 
@@ -228,9 +230,10 @@ export default function LoginPage() {
 
                   {/* Remember me + Forgot password */}
                   <div className="flex items-center justify-between">
-                    <label className="flex items-center gap-2 cursor-pointer group">
+                    <label htmlFor="rememberMe" className="flex items-center gap-2 cursor-pointer group">
                       <input
                         {...register('rememberMe')}
+                        id="rememberMe"
                         type="checkbox"
                         className="w-4 h-4 rounded border-white/20 bg-white/5 accent-violet-600 cursor-pointer"
                       />

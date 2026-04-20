@@ -19,11 +19,12 @@ import {
   ArrowRight,
   ArrowLeft,
   Star,
-  Zap as ZapIcon,
   Globe,
   ChevronDown,
   Hash,
 } from 'lucide-react'
+
+const MOCK_NETWORK_DELAY = 1200
 
 // ── Schemas ──────────────────────────────────────────────────────────────────
 
@@ -82,7 +83,7 @@ const PLANS = [
     name: 'Pro',
     price: '$29',
     period: '/month',
-    icon: ZapIcon,
+    icon: Zap,
     color: 'violet',
     features: ['Up to 500 users', 'Advanced analytics', 'Priority support', 'Custom roles'],
     popular: true,
@@ -160,7 +161,7 @@ function StepOrgInfo({ onNext }: { onNext: (d: OrgInfoData) => void }) {
             {...register('orgType')}
             className="w-full pl-10 pr-10 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-violet-500/50 appearance-none"
           >
-            <option value="">Select type…</option>
+            <option value="" disabled>Select type…</option>
             {ORG_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
           </select>
           <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 pointer-events-none" />
@@ -440,7 +441,7 @@ function UserJoinForm() {
             {...register('role')}
             className="w-full pl-10 pr-10 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-violet-500/50 appearance-none"
           >
-            <option value="">Select role…</option>
+            <option value="" disabled>Select role…</option>
             {ROLES.map((r) => <option key={r} value={r.toLowerCase()}>{r}</option>)}
           </select>
           <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 pointer-events-none" />
@@ -530,7 +531,7 @@ export default function RegisterPage() {
     try {
       // TODO: Firebase Auth create admin user + Firestore org document
       console.log('Org registration:', { orgData, adminData, planData })
-      await new Promise((r) => setTimeout(r, 1200))
+      await new Promise((r) => setTimeout(r, MOCK_NETWORK_DELAY))
       setSubmitted(true)
     } finally {
       setIsLoading(false)
