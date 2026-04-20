@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partners – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="badge badge-primary mb-3">Partner Program</div>
+      <h1>Partner with <span class="gradient-text">lvlBase</span></h1>
+      <p>Join our growing ecosystem of resellers, referral partners, and technology integrators. Grow your business while helping organizations thrive.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="grid-3 mb-6">
+        <div class="tier-card glass reveal reveal-delay-1">
+          <div class="tier-icon">🤝</div>
+          <div class="tier-name">Referral Partner</div>
+          <div class="tier-desc">Recommend lvlBase to your network and earn commissions on every successful signup.</div>
+          <ul class="tier-benefits">
+            <li>20% recurring commission</li>
+            <li>30-day cookie window</li>
+            <li>Co-branded landing pages</li>
+            <li>Partner portal dashboard</li>
+            <li>Marketing materials library</li>
+            <li>Monthly partner newsletter</li>
+          </ul>
+          <a href="#partner-form" class="btn btn-outline btn-full mt-4" style="margin-top:1.5rem;">Become a Referral Partner →</a>
+        </div>
+        <div class="tier-card glass reveal reveal-delay-2" style="border:1px solid rgba(124,58,237,0.3);">
+          <div class="tier-icon">💼</div>
+          <div class="tier-name" class="gradient-text">Reseller Partner</div>
+          <div class="tier-desc">Resell lvlBase to your clients at margin, with full white-labeling and dedicated support.</div>
+          <ul class="tier-benefits">
+            <li>35% margin on all sales</li>
+            <li>White-label options</li>
+            <li>Dedicated partner manager</li>
+            <li>Certified partner training</li>
+            <li>Priority technical support</li>
+            <li>Co-selling with lvlBase team</li>
+            <li>Lead sharing program</li>
+          </ul>
+          <a href="#partner-form" class="btn btn-primary btn-full mt-4" style="margin-top:1.5rem;">Apply as Reseller →</a>
+        </div>
+        <div class="tier-card glass reveal reveal-delay-3">
+          <div class="tier-icon">🔌</div>
+          <div class="tier-name">Technology Partner</div>
+          <div class="tier-desc">Build native integrations with lvlBase and list your solution in the App Marketplace.</div>
+          <ul class="tier-benefits">
+            <li>Marketplace listing</li>
+            <li>API access & sandbox</li>
+            <li>Technical co-engineering</li>
+            <li>Joint go-to-market</li>
+            <li>Marketplace revenue share</li>
+            <li>Product roadmap input</li>
+            <li>Beta program access</li>
+          </ul>
+          <a href="#partner-form" class="btn btn-outline btn-full mt-4" style="margin-top:1.5rem;">Apply as Tech Partner →</a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="glass" style="border-radius:20px;padding:3rem;text-align:center;margin-bottom:4rem;" class="reveal">
+        <h2 style="margin-bottom:2rem;">Partner <span class="gradient-text">Success Numbers</span></h2>
+        <div class="grid-4">
+          <div><div style="font-size:2.5rem;font-weight:900;" class="gradient-text">340+</div><div style="color:var(--text-muted);">Active Partners</div></div>
+          <div><div style="font-size:2.5rem;font-weight:900;" class="gradient-text">$8M+</div><div style="color:var(--text-muted);">Paid to Partners</div></div>
+          <div><div style="font-size:2.5rem;font-weight:900;" class="gradient-text">60+</div><div style="color:var(--text-muted);">Countries Covered</div></div>
+          <div><div style="font-size:2.5rem;font-weight:900;" class="gradient-text">95%</div><div style="color:var(--text-muted);">Partner Retention</div></div>
+        </div>
+      </div>
+
+      <!-- Partner application form -->
+      <div id="partner-form" class="glass" style="border-radius:20px;padding:2.5rem;max-width:640px;margin:0 auto;">
+        <h2 style="font-size:1.5rem;margin-bottom:0.5rem;">Apply to the <span class="gradient-text">Partner Program</span></h2>
+        <p style="margin-bottom:2rem;">Fill out the form below and our partnerships team will be in touch within 2 business days.</p>
+        <form onsubmit="this.innerHTML='<div style=\'text-align:center;padding:2rem;\'><div style=\'font-size:3rem;margin-bottom:1rem;\'>🎉</div><h3>Application submitted!</h3><p style=\'color:var(--text-muted);\'>We\'ll review your application and get back to you within 2 business days.</p></div>'; return false;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Alex"></div>
+            <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Kim"></div>
+          </div>
+          <div class="form-group"><label class="form-label">Company Name</label><input type="text" class="form-input" placeholder="Your company"></div>
+          <div class="form-group"><label class="form-label">Business Email</label><input type="email" class="form-input" placeholder="alex@company.com"></div>
+          <div class="form-group"><label class="form-label">Partnership Type</label><select class="form-select"><option>Referral Partner</option><option>Reseller Partner</option><option>Technology Partner</option></select></div>
+          <div class="form-group"><label class="form-label">Tell us about your business</label><textarea class="form-textarea" placeholder="Describe your company, your clients, and why you're interested in partnering with lvlBase..."></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full">Submit Partner Application →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

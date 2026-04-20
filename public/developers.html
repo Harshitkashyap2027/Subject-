@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developers – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="badge badge-neon mb-3">Developer Platform</div>
+      <h1>Build on <span class="gradient-text-neon">lvlBase</span></h1>
+      <p>A powerful, developer-first API platform with comprehensive SDKs, webhooks, and documentation. Build anything you can imagine on top of lvlBase.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;">
+        <a href="./docs.html" class="btn btn-primary btn-lg">Read the Docs →</a>
+        <a href="./register.html" class="btn btn-outline btn-lg">Get API Key</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <!-- Overview cards -->
+      <div class="grid-4 mb-6">
+        <div class="feature-card glass reveal reveal-delay-1" style="text-align:center;">
+          <span class="feature-icon">🔌</span>
+          <h3>REST API</h3>
+          <p style="font-size:0.85rem;">Clean RESTful API with OpenAPI 3.0 spec, predictable responses, and comprehensive error handling.</p>
+        </div>
+        <div class="feature-card glass reveal reveal-delay-2" style="text-align:center;">
+          <span class="feature-icon">🔗</span>
+          <h3>GraphQL</h3>
+          <p style="font-size:0.85rem;">Flexible GraphQL endpoint for complex queries. Fetch exactly the data you need in one request.</p>
+        </div>
+        <div class="feature-card glass reveal reveal-delay-3" style="text-align:center;">
+          <span class="feature-icon">📡</span>
+          <h3>Webhooks</h3>
+          <p style="font-size:0.85rem;">Real-time event delivery with automatic retries, signature verification, and delivery logs.</p>
+        </div>
+        <div class="feature-card glass reveal reveal-delay-4" style="text-align:center;">
+          <span class="feature-icon">🔐</span>
+          <h3>OAuth 2.0</h3>
+          <p style="font-size:0.85rem;">Industry-standard OAuth 2.0 authorization flow for building third-party integrations securely.</p>
+        </div>
+      </div>
+
+      <!-- SDKs -->
+      <div class="section-header reveal">
+        <div class="badge badge-neon mb-3">Official SDKs</div>
+        <h2>Download Your <span class="gradient-text-neon">SDK</span></h2>
+        <p>Official SDKs maintained by the lvlBase team. Community SDKs available for additional languages.</p>
+      </div>
+
+      <div class="grid-3 mb-6">
+        <div class="sdk-card glass reveal reveal-delay-1">
+          <div class="sdk-icon">🟡</div>
+          <div class="sdk-name">JavaScript / Node.js</div>
+          <div class="sdk-version">v2.4.1 · 4.2k stars</div>
+          <div class="code-block" style="margin-top:1rem;font-size:0.8rem;">npm install @lvlbase/sdk</div>
+          <a href="./docs.html" class="btn btn-outline btn-sm btn-full" style="margin-top:1rem;">View Documentation</a>
+        </div>
+        <div class="sdk-card glass reveal reveal-delay-2">
+          <div class="sdk-icon">🐍</div>
+          <div class="sdk-name">Python</div>
+          <div class="sdk-version">v2.2.0 · 2.8k stars</div>
+          <div class="code-block" style="margin-top:1rem;font-size:0.8rem;">pip install lvlbase</div>
+          <a href="./docs.html" class="btn btn-outline btn-sm btn-full" style="margin-top:1rem;">View Documentation</a>
+        </div>
+        <div class="sdk-card glass reveal reveal-delay-3">
+          <div class="sdk-icon">🐘</div>
+          <div class="sdk-name">PHP</div>
+          <div class="sdk-version">v1.8.3 · 1.1k stars</div>
+          <div class="code-block" style="margin-top:1rem;font-size:0.8rem;">composer require lvlbase/sdk</div>
+          <a href="./docs.html" class="btn btn-outline btn-sm btn-full" style="margin-top:1rem;">View Documentation</a>
+        </div>
+      </div>
+
+      <!-- Code example -->
+      <div class="section-header reveal">
+        <div class="badge badge-primary mb-3">Quick Example</div>
+        <h2>Start Building in <span class="gradient-text">5 Minutes</span></h2>
+      </div>
+
+      <div style="max-width:800px;margin:0 auto;" class="reveal">
+        <div class="code-block">
+<span class="comment">// Initialize the lvlBase client</span>
+<span class="keyword">const</span> { LvlBase } = <span class="function">require</span>(<span class="string">'@lvlbase/sdk'</span>);
+
+<span class="keyword">const</span> client = <span class="keyword">new</span> <span class="function">LvlBase</span>({
+  apiKey: process.env.<span class="string">LVLBASE_API_KEY</span>,
+  orgId: process.env.<span class="string">LVLBASE_ORG_ID</span>
+});
+
+<span class="comment">// List all users in your organization</span>
+<span class="keyword">const</span> users = <span class="keyword">await</span> client.users.<span class="function">list</span>({
+  page: 1,
+  limit: 50,
+  filter: { department: <span class="string">'Engineering'</span> }
+});
+
+<span class="comment">// Get AI insights for your organization</span>
+<span class="keyword">const</span> insights = <span class="keyword">await</span> client.ai.<span class="function">getInsights</span>({
+  type: <span class="string">'engagement'</span>,
+  period: <span class="string">'last_30_days'</span>
+});
+
+<span class="comment">// Create a new guild</span>
+<span class="keyword">const</span> guild = <span class="keyword">await</span> client.guilds.<span class="function">create</span>({
+  name: <span class="string">'Alpha Squad'</span>,
+  members: [<span class="string">'usr_001'</span>, <span class="string">'usr_002'</span>, <span class="string">'usr_003'</span>],
+  objectives: [<span class="string">'Complete onboarding module'</span>, <span class="string">'Hit Q1 targets'</span>]
+});
+
+console.<span class="function">log</span>(<span class="string">`Guild created: ${guild.id}`</span>);
+        </div>
+
+        <div class="grid-3 mt-4" style="margin-top:2rem;">
+          <div class="glass" style="border-radius:12px;padding:1.25rem;text-align:center;">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem;">⚡</div>
+            <div style="font-weight:700;font-size:0.9rem;">Fast Response Times</div>
+            <div style="color:var(--text-muted);font-size:0.8rem;">Avg API latency: &lt;50ms</div>
+          </div>
+          <div class="glass" style="border-radius:12px;padding:1.25rem;text-align:center;">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem;">📊</div>
+            <div style="font-weight:700;font-size:0.9rem;">99.99% Uptime</div>
+            <div style="color:var(--text-muted);font-size:0.8rem;">SLA-backed reliability</div>
+          </div>
+          <div class="glass" style="border-radius:12px;padding:1.25rem;text-align:center;">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem;">🔒</div>
+            <div style="font-weight:700;font-size:0.9rem;">Secure by Default</div>
+            <div style="color:var(--text-muted);font-size:0.8rem;">TLS 1.3 + key rotation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section reveal">
+    <div class="container">
+      <h2>Ready to <span class="gradient-text">Start Building?</span></h2>
+      <p style="max-width:500px;margin:1rem auto;">Get your API keys, explore the sandbox, and deploy your first integration today.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;">
+        <a href="./register.html" class="btn btn-neon btn-lg">Get API Keys Free →</a>
+        <a href="./docs.html" class="btn btn-outline btn-lg">Read the Docs</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+</body>
+</html>
