@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrations – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="badge badge-neon mb-3">500+ Integrations</div>
+      <h1>Connect Everything <span class="gradient-text">You Use</span></h1>
+      <p>lvlBase connects seamlessly with the tools your organization already relies on — no disruption, no re-training, just supercharged workflows.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all" data-target="integrations-grid">All</button>
+        <button class="filter-btn" data-filter="productivity" data-target="integrations-grid">Productivity</button>
+        <button class="filter-btn" data-filter="communication" data-target="integrations-grid">Communication</button>
+        <button class="filter-btn" data-filter="analytics" data-target="integrations-grid">Analytics</button>
+        <button class="filter-btn" data-filter="crm" data-target="integrations-grid">CRM</button>
+        <button class="filter-btn" data-filter="devtools" data-target="integrations-grid">Dev Tools</button>
+      </div>
+
+      <div class="integration-grid" id="integrations-grid">
+        <div class="integration-card glass" data-category="productivity">
+          <div class="integration-icon">🔵</div>
+          <h4>Google Workspace</h4>
+          <p style="font-size:0.82rem;">Sync Calendar, Drive, Gmail, Meet, and Classroom with your lvlBase workspace seamlessly.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-success">Official</span></div>
+        </div>
+        <div class="integration-card glass" data-category="productivity">
+          <div class="integration-icon">🪟</div>
+          <h4>Microsoft 365</h4>
+          <p style="font-size:0.82rem;">Connect Teams, Outlook, SharePoint, OneDrive, and Azure Active Directory.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-success">Official</span></div>
+        </div>
+        <div class="integration-card glass" data-category="communication">
+          <div class="integration-icon">💬</div>
+          <h4>Slack</h4>
+          <p style="font-size:0.82rem;">Send AI insights, alerts, and announcements directly to your Slack channels and DMs.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-success">Official</span></div>
+        </div>
+        <div class="integration-card glass" data-category="communication">
+          <div class="integration-icon">🎥</div>
+          <h4>Zoom</h4>
+          <p style="font-size:0.82rem;">Schedule, launch, and record Zoom meetings directly from lvlBase. AI meeting summaries included.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-success">Official</span></div>
+        </div>
+        <div class="integration-card glass" data-category="crm">
+          <div class="integration-icon">☁️</div>
+          <h4>Salesforce</h4>
+          <p style="font-size:0.82rem;">Sync customer data, deal pipelines, and team performance metrics between Salesforce and lvlBase.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-primary">Pro+</span></div>
+        </div>
+        <div class="integration-card glass" data-category="devtools">
+          <div class="integration-icon">🐙</div>
+          <h4>GitHub</h4>
+          <p style="font-size:0.82rem;">Track developer productivity, PR reviews, and code contribution metrics within your org dashboard.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-primary">Pro+</span></div>
+        </div>
+        <div class="integration-card glass" data-category="devtools">
+          <div class="integration-icon">🔷</div>
+          <h4>Jira</h4>
+          <p style="font-size:0.82rem;">Connect project management — sync sprints, issues, and team velocity directly into lvlBase analytics.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-primary">Pro+</span></div>
+        </div>
+        <div class="integration-card glass" data-category="crm">
+          <div class="integration-icon">🟠</div>
+          <h4>HubSpot</h4>
+          <p style="font-size:0.82rem;">Sync contacts, deals, and marketing data. Use lvlBase AI to analyze customer success patterns.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-primary">Pro+</span></div>
+        </div>
+        <div class="integration-card glass" data-category="productivity">
+          <div class="integration-icon">⚡</div>
+          <h4>Zapier</h4>
+          <p style="font-size:0.82rem;">Connect lvlBase to 5,000+ apps through Zapier's automation platform. Endless workflow possibilities.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-success">Official</span></div>
+        </div>
+        <div class="integration-card glass" data-category="analytics">
+          <div class="integration-icon">💰</div>
+          <h4>Stripe</h4>
+          <p style="font-size:0.82rem;">Process payments, manage subscriptions, and track financial metrics within your organization portal.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-primary">Pro+</span></div>
+        </div>
+        <div class="integration-card glass" data-category="analytics">
+          <div class="integration-icon">📊</div>
+          <h4>QuickBooks</h4>
+          <p style="font-size:0.82rem;">Sync accounting data, payroll, and budget tracking for a complete financial view of your organization.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-primary">Pro+</span></div>
+        </div>
+        <div class="integration-card glass" data-category="communication">
+          <div class="integration-icon">📱</div>
+          <h4>Twilio</h4>
+          <p style="font-size:0.82rem;">Send SMS notifications, alerts, and two-factor authentication codes to your organization members.</p>
+          <div style="margin-top:1rem;"><span class="badge badge-primary">Pro+</span></div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:3rem;" class="reveal">
+        <p style="margin-bottom:1.5rem;">Don't see your tool? We support 500+ integrations and can build custom connectors for Enterprise customers.</p>
+        <a href="./contact.html" class="btn btn-primary">Request an Integration →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- API Section -->
+  <section class="section" style="background:rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="badge badge-neon mb-3">Build Your Own</div>
+        <h2>Connect with Our <span class="gradient-text-neon">API</span></h2>
+        <p>Our REST API and webhooks let you build any integration imaginable. Full documentation available for developers.</p>
+      </div>
+      <div class="grid-3">
+        <div class="feature-card glass reveal reveal-delay-1">
+          <span class="feature-icon">🔌</span>
+          <h3>REST API</h3>
+          <p>Clean, well-documented REST API with predictable resource URLs, JSON responses, and comprehensive error handling.</p>
+        </div>
+        <div class="feature-card glass reveal reveal-delay-2">
+          <span class="feature-icon">📡</span>
+          <h3>Webhooks</h3>
+          <p>Real-time event notifications delivered to your endpoints. Supports custom retry logic and delivery confirmation.</p>
+        </div>
+        <div class="feature-card glass reveal reveal-delay-3">
+          <span class="feature-icon">🔗</span>
+          <h3>GraphQL</h3>
+          <p>Query exactly the data you need with our flexible GraphQL endpoint. Available for Enterprise plan customers.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;">
+        <a href="./developers.html" class="btn btn-outline btn-lg">Developer Documentation →</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+</body>
+</html>
