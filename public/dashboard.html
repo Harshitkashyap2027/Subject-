@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .dash-widget { border-radius: 16px; padding: 1.5rem; }
+    .activity-item { display: flex; align-items: center; gap: 0.875rem; padding: 0.75rem 0; border-bottom: 1px solid var(--glass-border); }
+    .activity-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .activity-item:last-child { border-bottom: none; }
+    .mini-bar-chart { display: flex; align-items: flex-end; gap: 4px; height: 60px; }
+    .mini-bar { flex: 1; border-radius: 3px 3px 0 0; background: linear-gradient(to top, var(--primary), #a78bfa); min-width: 6px; }
+  </style>
+</head>
+<body class="mesh-bg" data-page="dashboard">
+  <div id="navbar-placeholder"></div>
+
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div style="padding:0.5rem 0.75rem;margin-bottom:1.5rem;">
+        <div style="display:flex;align-items:center;gap:0.75rem;padding:0.875rem;border-radius:10px;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);">
+          <div id="user-avatar" style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:1rem;flex-shrink:0;">U</div>
+          <div style="overflow:hidden;">
+            <div id="user-name" style="font-weight:700;font-size:0.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Loading...</div>
+            <div id="user-email" style="font-size:0.75rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">...</div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-item active"><span class="icon">🏠</span> Overview</div>
+      <div class="sidebar-item"><span class="icon">👥</span> People</div>
+      <div class="sidebar-item"><span class="icon">📊</span> Analytics</div>
+      <div class="sidebar-item"><span class="icon">⚔️</span> Guilds</div>
+      <div class="sidebar-item"><span class="icon">🧬</span> Skill DNA</div>
+      <div class="sidebar-item"><span class="icon">🤖</span> AI Assistant</div>
+      <div class="sidebar-item"><span class="icon">⚡</span> Workflows</div>
+      <div class="sidebar-item"><span class="icon">📋</span> Reports</div>
+      <div class="sidebar-item"><span class="icon">🔌</span> Integrations</div>
+      <div style="position:absolute;bottom:2rem;left:1rem;right:1rem;">
+        <div class="sidebar-item"><span class="icon">⚙️</span> Settings</div>
+        <button id="signout-btn" class="btn btn-outline btn-full btn-sm" style="margin-top:0.5rem;">Sign Out</button>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="dashboard-main">
+      <!-- Welcome header -->
+      <div style="margin-bottom:2rem;">
+        <div class="badge badge-success mb-2">● Online</div>
+        <h1 style="font-size:1.75rem;margin-bottom:0.5rem;">Welcome back, <span class="gradient-text" id="dash-name">User</span> 👋</h1>
+        <p>Here's what's happening in your organization today.</p>
+      </div>
+
+      <!-- Stats row -->
+      <div class="grid-4 mb-4">
+        <div class="stat-card glass">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <div>
+              <div class="stat-label">Active Users</div>
+              <div class="stat-value">2,847</div>
+              <div class="stat-change">↑ 12% this week</div>
+            </div>
+            <span style="font-size:2rem;">👥</span>
+          </div>
+        </div>
+        <div class="stat-card glass">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <div>
+              <div class="stat-label">Engagement Rate</div>
+              <div class="stat-value" style="color:#34d399;">94%</div>
+              <div class="stat-change">↑ 8% this month</div>
+            </div>
+            <span style="font-size:2rem;">📈</span>
+          </div>
+        </div>
+        <div class="stat-card glass">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <div>
+              <div class="stat-label">Active Guilds</div>
+              <div class="stat-value" style="color:#a78bfa;">24</div>
+              <div class="stat-change">3 new this week</div>
+            </div>
+            <span style="font-size:2rem;">⚔️</span>
+          </div>
+        </div>
+        <div class="stat-card glass">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <div>
+              <div class="stat-label">AI Queries Today</div>
+              <div class="stat-value" style="color:var(--accent-neon);">1,204</div>
+              <div class="stat-change">↑ 23% vs yesterday</div>
+            </div>
+            <span style="font-size:2rem;">🤖</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main widgets row -->
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+        <!-- Performance chart -->
+        <div class="dash-widget glass">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+            <h3 style="font-size:1rem;">Organization Performance</h3>
+            <span class="badge badge-success">Last 30 days</span>
+          </div>
+          <div class="bar-chart" style="height:140px;margin-bottom:1rem;">
+            <div class="bar" style="height:55%"></div>
+            <div class="bar" style="height:70%"></div>
+            <div class="bar" style="height:48%"></div>
+            <div class="bar" style="height:82%"></div>
+            <div class="bar" style="height:65%"></div>
+            <div class="bar" style="height:91%"></div>
+            <div class="bar" style="height:76%"></div>
+            <div class="bar" style="height:88%"></div>
+            <div class="bar" style="height:72%"></div>
+            <div class="bar" style="height:95%"></div>
+            <div class="bar" style="height:85%"></div>
+            <div class="bar" style="height:100%"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-muted);">
+            <span>Jan 1</span><span>Jan 8</span><span>Jan 15</span><span>Jan 22</span><span>Jan 29</span>
+          </div>
+        </div>
+        <!-- AI insight panel -->
+        <div class="dash-widget glass">
+          <h3 style="font-size:1rem;margin-bottom:1rem;">🤖 AI Insights</h3>
+          <div style="display:flex;flex-direction:column;gap:0.875rem;">
+            <div class="ai-insight">💡 Engagement peaked Tuesday — schedule key comms mid-week.</div>
+            <div class="ai-insight" style="border-color:rgba(34,211,238,0.2);background:rgba(34,211,238,0.05);color:#67e8f9;">📊 Team Alpha's completion rate is 47% above average. Share their approach org-wide.</div>
+            <div class="ai-insight" style="border-color:rgba(16,185,129,0.2);background:rgba(16,185,129,0.05);color:#6ee7b7;">🎯 3 employees are ready for promotion based on Skill DNA analysis.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+        <!-- Recent activity -->
+        <div class="dash-widget glass">
+          <h3 style="font-size:1rem;margin-bottom:1rem;">Recent Activity</h3>
+          <div class="activity-item">
+            <div class="activity-icon" style="background:rgba(124,58,237,0.15);">🏆</div>
+            <div><div style="font-size:0.87rem;font-weight:600;">Alpha Guild reached Level 5</div><div style="font-size:0.77rem;color:var(--text-muted);">2 minutes ago</div></div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon" style="background:rgba(34,211,238,0.1);">🧬</div>
+            <div><div style="font-size:0.87rem;font-weight:600;">12 Skill DNA profiles updated</div><div style="font-size:0.77rem;color:var(--text-muted);">1 hour ago</div></div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon" style="background:rgba(16,185,129,0.1);">✅</div>
+            <div><div style="font-size:0.87rem;font-weight:600;">Q4 compliance training completed</div><div style="font-size:0.77rem;color:var(--text-muted);">3 hours ago</div></div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon" style="background:rgba(37,99,235,0.1);">📋</div>
+            <div><div style="font-size:0.87rem;font-weight:600;">Monthly report auto-generated</div><div style="font-size:0.77rem;color:var(--text-muted);">Yesterday</div></div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon" style="background:rgba(245,158,11,0.1);">⚡</div>
+            <div><div style="font-size:0.87rem;font-weight:600;">New workflow automation triggered</div><div style="font-size:0.77rem;color:var(--text-muted);">Yesterday</div></div>
+          </div>
+        </div>
+        <!-- Top guilds -->
+        <div class="dash-widget glass">
+          <h3 style="font-size:1rem;margin-bottom:1rem;">⚔️ Guild Leaderboard</h3>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0.875rem;border-radius:8px;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);">
+              <div style="display:flex;align-items:center;gap:0.625rem;"><span style="font-size:1.1rem;">🥇</span><span style="font-size:0.87rem;font-weight:600;">Alpha Squad</span></div>
+              <span style="font-size:0.82rem;color:#a78bfa;font-weight:700;">12,400 XP</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0.875rem;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);">
+              <div style="display:flex;align-items:center;gap:0.625rem;"><span style="font-size:1.1rem;">🥈</span><span style="font-size:0.87rem;font-weight:600;">Phoenix Team</span></div>
+              <span style="font-size:0.82rem;color:var(--text-secondary);font-weight:700;">11,850 XP</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0.875rem;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);">
+              <div style="display:flex;align-items:center;gap:0.625rem;"><span style="font-size:1.1rem;">🥉</span><span style="font-size:0.87rem;font-weight:600;">Vanguard Unit</span></div>
+              <span style="font-size:0.82rem;color:var(--text-secondary);font-weight:700;">10,200 XP</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0.875rem;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);">
+              <div style="display:flex;align-items:center;gap:0.625rem;"><span>4️⃣</span><span style="font-size:0.87rem;font-weight:600;">Storm Breakers</span></div>
+              <span style="font-size:0.82rem;color:var(--text-muted);font-weight:700;">9,750 XP</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0.875rem;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);">
+              <div style="display:flex;align-items:center;gap:0.625rem;"><span>5️⃣</span><span style="font-size:0.87rem;font-weight:600;">Nova Collective</span></div>
+              <span style="font-size:0.82rem;color:var(--text-muted);font-weight:700;">8,900 XP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- We add footer but hide sidebar link on small screen -->
+  <div id="footer-placeholder"></div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="./js/firebase-config.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    // Sync dash-name with user-name after auth loads
+    document.addEventListener('DOMContentLoaded', function() {
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          const dashName = document.getElementById('dash-name');
+          if (dashName) dashName.textContent = user.displayName || user.email.split('@')[0];
+        }
+      });
+    });
+  </script>
+</body>
+</html>
