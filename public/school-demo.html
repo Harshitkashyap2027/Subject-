@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School System Demo — lvlBase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .role-hero { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; margin-bottom:64px; }
+    .role-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:28px; padding:32px 24px; transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1); }
+    .role-card:hover { transform:translateY(-6px); }
+    .role-emoji { font-size:48px; margin-bottom:16px; }
+    .role-name { font-size:18px; font-weight:800; margin-bottom:8px; }
+    .role-list { list-style:none; margin:0 0 20px; padding:0; display:flex; flex-direction:column; gap:6px; }
+    .role-list li { font-size:13px; color:rgba(255,255,255,0.6); display:flex; align-items:center; gap:8px; }
+    .role-list li::before { content:'→'; color:var(--rc,#7c3aed); font-weight:700; }
+    .feature-strip { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-bottom:48px; }
+    .feature-pill { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:18px; padding:20px 18px; display:flex; align-items:center; gap:12px; }
+    .feature-pill-icon { font-size:24px; }
+    .feature-pill-text { font-size:13px; font-weight:600; color:rgba(255,255,255,0.8); }
+    .demo-screens { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:48px; }
+    .screen-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:20px; overflow:hidden; }
+    .screen-preview { height:180px; background:linear-gradient(135deg,rgba(124,58,237,0.3),rgba(6,182,212,0.2)); display:flex; align-items:center; justify-content:center; font-size:56px; }
+    .screen-info { padding:16px; }
+    .screen-title { font-size:14px; font-weight:700; margin-bottom:4px; }
+    .screen-sub { font-size:12px; color:rgba(255,255,255,0.5); }
+  </style>
+</head>
+<body class="mesh-bg">
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="badge badge-neon mb-3">🎓 School System Demo</div>
+      <h1>Complete School <span class="gradient-text">Management System</span></h1>
+      <p>A fully functional school platform built with Apple Bento design — covering every aspect of school operations from students to admin.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:32px">
+        <a href="./school/index.html" class="btn btn-primary">🎓 Try Live Demo →</a>
+        <a href="./school/student/dashboard.html" class="btn btn-ghost" style="border:1px solid rgba(255,255,255,0.2)">👨‍🎓 Student Demo</a>
+        <a href="./school/admin/dashboard.html" class="btn btn-ghost" style="border:1px solid rgba(255,255,255,0.2)">🏫 Admin Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+
+      <!-- Role Cards -->
+      <div class="section-header reveal">
+        <h2>4 Complete <span class="gradient-text">Service Modules</span></h2>
+        <p>Every role gets a dedicated, fully-featured dashboard</p>
+      </div>
+
+      <div class="role-hero reveal">
+        <div class="role-card reveal-delay-1" style="--rc:#3b82f6;border-color:rgba(59,130,246,0.3)">
+          <div class="role-emoji">👨‍🎓</div>
+          <div class="role-name" style="color:#3b82f6">Student Service</div>
+          <ul class="role-list">
+            <li>Dashboard — attendance, marks overview</li>
+            <li>My Subjects — materials & progress</li>
+            <li>Assignments — view & submit</li>
+            <li>Attendance Record — daily log</li>
+            <li>Results / Report Card</li>
+            <li>Learning Path (AI roadmap)</li>
+            <li>Mock Tests — practice exams</li>
+            <li>Skill Profile — strength/weakness</li>
+            <li>Achievements & Rank</li>
+            <li>Notifications & Profile</li>
+          </ul>
+          <a href="./school/student/dashboard.html" class="btn btn-primary btn-sm" style="background:#3b82f6">Try Student Demo →</a>
+        </div>
+
+        <div class="role-card reveal-delay-2" style="--rc:#10b981;border-color:rgba(16,185,129,0.3)">
+          <div class="role-emoji">👩‍🏫</div>
+          <div class="role-name" style="color:#10b981">Teacher Service</div>
+          <ul class="role-list">
+            <li>Dashboard — class overview</li>
+            <li>My Classes — assigned sections</li>
+            <li>Mark Attendance</li>
+            <li>Assignments Manager</li>
+            <li>Student Analytics</li>
+            <li>Lesson Planner</li>
+            <li>Exam Creator</li>
+            <li>Gradebook — marks entry</li>
+            <li>Announcements</li>
+            <li>Teacher Profile</li>
+          </ul>
+          <a href="./school/teacher/dashboard.html" class="btn btn-primary btn-sm" style="background:#10b981">Try Teacher Demo →</a>
+        </div>
+
+        <div class="role-card reveal-delay-3" style="--rc:#f59e0b;border-color:rgba(245,158,11,0.3)">
+          <div class="role-emoji">👨‍👩‍👧</div>
+          <div class="role-name" style="color:#f59e0b">Parent Service</div>
+          <ul class="role-list">
+            <li>Dashboard — child overview</li>
+            <li>Child Performance — analytics</li>
+            <li>Attendance Tracking</li>
+            <li>Fees Status — pay online</li>
+            <li>Notifications from school</li>
+            <li>Parent Profile</li>
+          </ul>
+          <a href="./school/parent/dashboard.html" class="btn btn-primary btn-sm" style="background:#f59e0b;color:#000">Try Parent Demo →</a>
+        </div>
+
+        <div class="role-card reveal-delay-1" style="--rc:#7c3aed;border-color:rgba(124,58,237,0.3)">
+          <div class="role-emoji">🏫</div>
+          <div class="role-name" style="color:#7c3aed">Admin Service</div>
+          <ul class="role-list">
+            <li>School Dashboard — full metrics</li>
+            <li>User Management (students/teachers/parents)</li>
+            <li>Classes & Sections, Subjects</li>
+            <li>Timetable & Curriculum</li>
+            <li>Exam System & Results</li>
+            <li>Fees & Billing Management</li>
+            <li>Library, Transport, Hostel</li>
+            <li>Behavior & Counseling</li>
+            <li>Announcements & Notifications</li>
+            <li>Reports & Settings</li>
+          </ul>
+          <a href="./school/admin/dashboard.html" class="btn btn-primary btn-sm">Try Admin Demo →</a>
+        </div>
+      </div>
+
+      <!-- Feature Pills -->
+      <div class="section-header reveal">
+        <h2>System <span class="gradient-text">Highlights</span></h2>
+      </div>
+      <div class="feature-strip reveal">
+        <div class="feature-pill"><div class="feature-pill-icon">📱</div><div class="feature-pill-text">Apple Bento Design</div></div>
+        <div class="feature-pill"><div class="feature-pill-icon">🔥</div><div class="feature-pill-text">Firebase Backend</div></div>
+        <div class="feature-pill"><div class="feature-pill-icon">💬</div><div class="feature-pill-text">Custom iOS Popups</div></div>
+        <div class="feature-pill"><div class="feature-pill-icon">📊</div><div class="feature-pill-text">Real-time Analytics</div></div>
+        <div class="feature-pill"><div class="feature-pill-icon">🎓</div><div class="feature-pill-text">47+ Dashboard Pages</div></div>
+        <div class="feature-pill"><div class="feature-pill-icon">📱</div><div class="feature-pill-text">Fully Responsive</div></div>
+      </div>
+
+      <!-- Demo Screens -->
+      <div class="section-header reveal">
+        <h2>Preview <span class="gradient-text">Screenshots</span></h2>
+      </div>
+      <div class="demo-screens reveal">
+        <div class="screen-card"><div class="screen-preview">📊</div><div class="screen-info"><div class="screen-title">Student Dashboard</div><div class="screen-sub">Bento stats, subject progress, quick actions</div></div></div>
+        <div class="screen-card"><div class="screen-preview" style="background:linear-gradient(135deg,rgba(16,185,129,0.3),rgba(6,182,212,0.2))">👩‍🏫</div><div class="screen-info"><div class="screen-title">Teacher Dashboard</div><div class="screen-sub">Schedule, class management, gradebook</div></div></div>
+        <div class="screen-card"><div class="screen-preview" style="background:linear-gradient(135deg,rgba(124,58,237,0.3),rgba(239,68,68,0.2))">🏫</div><div class="screen-info"><div class="screen-title">Admin Control Center</div><div class="screen-sub">School metrics, users, finances, reports</div></div></div>
+        <div class="screen-card"><div class="screen-preview" style="background:linear-gradient(135deg,rgba(245,158,11,0.3),rgba(16,185,129,0.2))">👨‍👩‍👧</div><div class="screen-info"><div class="screen-title">Parent Dashboard</div><div class="screen-sub">Child performance, fees, attendance</div></div></div>
+        <div class="screen-card"><div class="screen-preview" style="background:linear-gradient(135deg,rgba(59,130,246,0.3),rgba(124,58,237,0.2))">📝</div><div class="screen-info"><div class="screen-title">Assignments System</div><div class="screen-sub">Create, submit, grade assignments</div></div></div>
+        <div class="screen-card"><div class="screen-preview" style="background:linear-gradient(135deg,rgba(6,182,212,0.3),rgba(16,185,129,0.2))">💰</div><div class="screen-info"><div class="screen-title">Fees & Billing</div><div class="screen-sub">Online payments, receipts, reminders</div></div></div>
+      </div>
+
+      <!-- CTA -->
+      <div class="glass reveal" style="border-radius:28px;padding:48px;text-align:center;max-width:640px;margin:0 auto">
+        <div style="font-size:48px;margin-bottom:16px">🎓</div>
+        <h2 style="font-size:1.8rem;margin-bottom:12px">Ready to <span class="gradient-text">Try It?</span></h2>
+        <p style="margin-bottom:28px">Experience the full school system with live demo data. No registration needed.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="./school/index.html" class="btn btn-primary" style="font-size:16px;padding:14px 32px">🎓 Launch School Demo →</a>
+          <a href="./demo.html" class="btn btn-ghost" style="border:1px solid rgba(255,255,255,0.2)">← Back to All Demos</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

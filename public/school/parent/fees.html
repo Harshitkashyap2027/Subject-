@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fees Status — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#f59e0b; --role-rgb:245,158,11; }</style>
+</head>
+<body>
+  <div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo"><div class="logo-icon">🎓</div><div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div></div>
+      <div class="user-info"><div class="user-avatar" style="font-size:13px;font-weight:700">P</div><div><div class="user-name">Mrs. Sunita Sharma</div><div class="user-role">Parent</div></div></div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link"><span class="nav-icon">📊</span>Dashboard</a><a href="child-performance.html" class="nav-link"><span class="nav-icon">📈</span>Child Performance</a><a href="attendance.html" class="nav-link"><span class="nav-icon">🗓️</span>Attendance</a><a href="fees.html" class="nav-link  active"><span class="nav-icon">💰</span>Fees Status</a><a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a><a href="profile.html" class="nav-link"><span class="nav-icon">👤</span>My Profile</a></nav>
+    <div class="sidebar-footer"><button class="logout-btn" onclick="showConfirm('Logout?','Are you sure?',()=>{window.location.href='../index.html';})">🚪 Logout</button></div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Fees Status</div><div class="page-subtitle">Payments & dues</div></div>
+      <div class="top-bar-right"><div class="search-bar"><span>🔍</span><input placeholder="Search..."></div><button class="icon-btn" onclick="showInfo('Notifications','You have 3 new notifications.')">🔔</button><button class="icon-btn">👤</button></div>
+    </div>
+
+      <div class="bento-grid bento-3" style="margin-bottom:20px">
+        <div class="card" style="background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.3)">
+          <div style="font-size:28px;margin-bottom:8px">💚</div><div style="font-size:13px;color:var(--text-muted)">Q1 Fees</div>
+          <div style="font-size:28px;font-weight:800">Rs.12,500</div><span class="badge badge-success" style="margin-top:8px;display:inline-flex">Paid</span>
+        </div>
+        <div class="card" style="background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.3)">
+          <div style="font-size:28px;margin-bottom:8px">💚</div><div style="font-size:13px;color:var(--text-muted)">Q2 Fees</div>
+          <div style="font-size:28px;font-weight:800">Rs.12,500</div><span class="badge badge-success" style="margin-top:8px;display:inline-flex">Paid</span>
+        </div>
+        <div class="card" style="background:rgba(239,68,68,0.1);border-color:rgba(239,68,68,0.3)">
+          <div style="font-size:28px;margin-bottom:8px">🔴</div><div style="font-size:13px;color:var(--text-muted)">Q3 Fees</div>
+          <div style="font-size:28px;font-weight:800">Rs.12,500</div><span class="badge badge-error" style="margin-top:8px;display:inline-flex">Due Jan 31</span>
+          <div style="margin-top:12px"><button class="btn btn-primary btn-sm" onclick="showConfirm('Confirm Payment?','Pay Rs.12,500 for Q3 fees?',()=>showSuccess('Payment Successful!','Receipt sent to your email.'))">Pay Now</button></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="section-title" style="margin-bottom:16px">Payment History</div>
+        <div class="table-container"><table><thead><tr><th>Date</th><th>Quarter</th><th>Amount</th><th>Mode</th><th>Receipt</th></tr></thead><tbody>
+          <tr><td>Oct 5, 2023</td><td>Q2 2023-24</td><td>Rs.12,500</td><td>Online</td><td><button class="btn btn-secondary btn-sm" onclick="showSuccess('Downloaded','Receipt saved.')">Download</button></td></tr>
+          <tr><td>Jul 8, 2023</td><td>Q1 2023-24</td><td>Rs.12,500</td><td>Cash</td><td><button class="btn btn-secondary btn-sm" onclick="showSuccess('Downloaded','Receipt saved.')">Download</button></td></tr>
+        </tbody></table></div>
+      </div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>

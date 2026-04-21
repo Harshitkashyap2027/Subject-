@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Record — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#3b82f6; --role-rgb:59,130,246; }</style>
+</head>
+<body>
+  <div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo">
+        <div class="logo-icon">🎓</div>
+        <div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div>
+      </div>
+      <div class="user-info">
+        <div class="user-avatar">👩‍🎓</div>
+        <div><div class="user-name">Riya Sharma</div><div class="user-role">Student</div></div>
+      </div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link"><span class="nav-icon">📊</span>Dashboard</a>
+<a href="subjects.html" class="nav-link"><span class="nav-icon">📚</span>My Subjects</a>
+<a href="assignments.html" class="nav-link"><span class="nav-icon">📝</span>Assignments</a>
+<a href="attendance.html" class="nav-link active"><span class="nav-icon">🗓️</span>Attendance</a>
+<a href="results.html" class="nav-link"><span class="nav-icon">🏆</span>Results</a>
+<a href="learning-path.html" class="nav-link"><span class="nav-icon">🧭</span>Learning Path</a>
+<a href="mock-tests.html" class="nav-link"><span class="nav-icon">📋</span>Mock Tests</a>
+<a href="skill-profile.html" class="nav-link"><span class="nav-icon">🧬</span>Skill Profile</a>
+<a href="achievements.html" class="nav-link"><span class="nav-icon">🏅</span>Achievements</a>
+<a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a>
+<a href="profile.html" class="nav-link"><span class="nav-icon">👤</span>My Profile</a>
+</nav>
+    <div class="sidebar-footer">
+      <button class="logout-btn" onclick="showConfirm('Logout?','Are you sure you want to logout?',()=>{window.location.href='../index.html';})">🚪 Logout</button>
+    </div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Attendance Record</div><div class="page-subtitle">January 2024</div></div>
+      <div class="top-bar-right">
+        <div class="search-bar"><span>🔍</span><input placeholder="Search..."></div>
+        <button class="icon-btn" onclick="showInfo('Notifications','You have 3 new notifications.')">🔔</button>
+        <button class="icon-btn">👤</button>
+      </div>
+    </div>
+      <div class="bento-grid bento-4" style="margin-bottom:20px">
+        <div class="stat-card"><div class="stat-icon">✅</div><div class="stat-value">92%</div><div class="stat-label">Attendance Rate</div></div>
+        <div class="stat-card"><div class="stat-icon">📅</div><div class="stat-value">22</div><div class="stat-label">Days Present</div></div>
+        <div class="stat-card"><div class="stat-icon">❌</div><div class="stat-value">3</div><div class="stat-label">Days Absent</div></div>
+        <div class="stat-card"><div class="stat-icon">⏰</div><div class="stat-value">2</div><div class="stat-label">Late Arrivals</div></div>
+      </div>
+      <div class="card">
+        <div class="card-title" style="margin-bottom:16px">📅 January 2024</div>
+        <div class="table-container"><table><thead><tr><th>Date</th><th>Day</th><th>Status</th></tr></thead><tbody>
+          <tr><td>Jan 17</td><td>Wednesday</td><td><span class="badge badge-success">Present</span></td></tr>
+          <tr><td>Jan 16</td><td>Tuesday</td><td><span class="badge badge-success">Present</span></td></tr>
+          <tr><td>Jan 15</td><td>Monday</td><td><span class="badge badge-error">Absent</span></td></tr>
+          <tr><td>Jan 12</td><td>Friday</td><td><span class="badge badge-success">Present</span></td></tr>
+          <tr><td>Jan 11</td><td>Thursday</td><td><span class="badge badge-warning">Late</span></td></tr>
+          <tr><td>Jan 10</td><td>Wednesday</td><td><span class="badge badge-success">Present</span></td></tr>
+          <tr><td>Jan 9</td><td>Tuesday</td><td><span class="badge badge-success">Present</span></td></tr>
+          <tr><td>Jan 8</td><td>Monday</td><td><span class="badge badge-error">Absent</span></td></tr>
+        </tbody></table></div>
+      </div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>

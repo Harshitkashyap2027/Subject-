@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Performance — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#f59e0b; --role-rgb:245,158,11; }</style>
+</head>
+<body>
+  <div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo"><div class="logo-icon">🎓</div><div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div></div>
+      <div class="user-info"><div class="user-avatar" style="font-size:13px;font-weight:700">P</div><div><div class="user-name">Mrs. Sunita Sharma</div><div class="user-role">Parent</div></div></div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link"><span class="nav-icon">📊</span>Dashboard</a><a href="child-performance.html" class="nav-link  active"><span class="nav-icon">📈</span>Child Performance</a><a href="attendance.html" class="nav-link"><span class="nav-icon">🗓️</span>Attendance</a><a href="fees.html" class="nav-link"><span class="nav-icon">💰</span>Fees Status</a><a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a><a href="profile.html" class="nav-link"><span class="nav-icon">👤</span>My Profile</a></nav>
+    <div class="sidebar-footer"><button class="logout-btn" onclick="showConfirm('Logout?','Are you sure?',()=>{window.location.href='../index.html';})">🚪 Logout</button></div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Child Performance</div><div class="page-subtitle">Marks & analytics</div></div>
+      <div class="top-bar-right"><div class="search-bar"><span>🔍</span><input placeholder="Search..."></div><button class="icon-btn" onclick="showInfo('Notifications','You have 3 new notifications.')">🔔</button><button class="icon-btn">👤</button></div>
+    </div>
+
+      <div class="card" style="margin-bottom:20px">
+        <div class="section-title" style="margin-bottom:16px">📊 Riya Sharma — Detailed Report</div>
+        <div class="table-container"><table><thead><tr><th>Subject</th><th>Teacher</th><th>Exam 1</th><th>Exam 2</th><th>Final</th><th>Grade</th><th>Trend</th></tr></thead><tbody>
+          <tr><td>Mathematics</td><td>Mr. Kumar</td><td>85</td><td>88</td><td>91</td><td><span class="badge badge-success">A</span></td><td style="color:var(--success)">↑ Improving</td></tr>
+          <tr><td>Science</td><td>Ms. Verma</td><td>76</td><td>79</td><td>82</td><td><span class="badge badge-info">B+</span></td><td style="color:var(--success)">↑ Improving</td></tr>
+          <tr><td>English</td><td>Mr. Singh</td><td>88</td><td>83</td><td>85</td><td><span class="badge badge-success">A-</span></td><td style="color:var(--warning)">→ Stable</td></tr>
+          <tr><td>History</td><td>Ms. Rao</td><td>70</td><td>74</td><td>76</td><td><span class="badge badge-warning">B</span></td><td style="color:var(--success)">↑ Improving</td></tr>
+          <tr><td>CS</td><td>Mr. Nair</td><td>92</td><td>95</td><td>98</td><td><span class="badge badge-success">A+</span></td><td style="color:var(--success)">↑ Excellent</td></tr>
+        </tbody></table></div>
+      </div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>

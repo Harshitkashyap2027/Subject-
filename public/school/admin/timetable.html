@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetable Manager — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#7c3aed; --role-rgb:124,58,237; }</style>
+</head>
+<body>
+  <div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo"><div class="logo-icon">🎓</div><div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div></div>
+      <div class="user-info"><div class="user-avatar" style="font-size:13px;font-weight:700">A</div><div><div class="user-name">Dr. A.K. Verma</div><div class="user-role">Admin</div></div></div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link"><span class="nav-icon">📊</span>Dashboard</a><a href="users.html" class="nav-link"><span class="nav-icon">👥</span>Users</a><a href="classes.html" class="nav-link"><span class="nav-icon">🏫</span>Classes</a><a href="subjects.html" class="nav-link"><span class="nav-icon">📚</span>Subjects</a><a href="curriculum.html" class="nav-link"><span class="nav-icon">📅</span>Curriculum</a><a href="timetable.html" class="nav-link  active"><span class="nav-icon">🕐</span>Timetable</a><a href="exams.html" class="nav-link"><span class="nav-icon">📋</span>Exams</a><a href="results.html" class="nav-link"><span class="nav-icon">📊</span>Results</a><a href="gradebook.html" class="nav-link"><span class="nav-icon">📒</span>Gradebook</a><a href="fees.html" class="nav-link"><span class="nav-icon">💰</span>Fees</a><a href="billing.html" class="nav-link"><span class="nav-icon">🧾</span>Billing</a><a href="behavior.html" class="nav-link"><span class="nav-icon">⚠️</span>Behavior</a><a href="counseling.html" class="nav-link"><span class="nav-icon">🧠</span>Counseling</a><a href="library.html" class="nav-link"><span class="nav-icon">📖</span>Library</a><a href="transport.html" class="nav-link"><span class="nav-icon">🚌</span>Transport</a><a href="hostel.html" class="nav-link"><span class="nav-icon">🏨</span>Hostel</a><a href="announcements.html" class="nav-link"><span class="nav-icon">📢</span>Announcements</a><a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a><a href="reports.html" class="nav-link"><span class="nav-icon">📊</span>Reports</a><a href="settings.html" class="nav-link"><span class="nav-icon">⚙️</span>Settings</a></nav>
+    <div class="sidebar-footer"><button class="logout-btn" onclick="showConfirm('Logout?','Are you sure?',()=>{window.location.href='../index.html';})">🚪 Logout</button></div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Timetable Manager</div><div class="page-subtitle">Schedule classes</div></div>
+      <div class="top-bar-right"><div class="search-bar"><span>🔍</span><input placeholder="Search..."></div><button class="icon-btn" onclick="showInfo('Notifications','3 new notifications.')">🔔</button><button class="icon-btn">👤</button></div>
+    </div>
+
+      <div class="card">
+        <div class="section-header"><div class="section-title">Timetable — Class 9A</div><div style="display:flex;gap:8px"><select class="form-control" style="width:130px"><option>Class 9A</option><option>Class 9B</option><option>Class 10A</option></select><button class="btn btn-primary btn-sm" onclick="showSuccess('Saved','Timetable saved.')">Save</button></div></div>
+        <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;margin-top:12px"><thead><tr><th style="padding:10px;background:var(--bg-secondary);border:1px solid var(--glass-border)">Period</th><th style="padding:10px;background:var(--bg-secondary);border:1px solid var(--glass-border)">Mon</th><th style="padding:10px;background:var(--bg-secondary);border:1px solid var(--glass-border)">Tue</th><th style="padding:10px;background:var(--bg-secondary);border:1px solid var(--glass-border)">Wed</th><th style="padding:10px;background:var(--bg-secondary);border:1px solid var(--glass-border)">Thu</th><th style="padding:10px;background:var(--bg-secondary);border:1px solid var(--glass-border)">Fri</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:10px;border:1px solid var(--glass-border);font-weight:600">9:00 AM</td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-info">Mathematics</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-success">CS</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-purple">Science</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-warning">History</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-info">Mathematics</span></td></tr>
+          <tr><td style="padding:10px;border:1px solid var(--glass-border);font-weight:600">11:00 AM</td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-purple">Science</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-info">Mathematics</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-warning">Geography</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-cyan">English</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-success">CS</span></td></tr>
+          <tr><td style="padding:10px;border:1px solid var(--glass-border);font-weight:600">1:00 PM</td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-cyan">English</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-warning">History</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-info">Mathematics</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-purple">Science</span></td><td style="padding:10px;border:1px solid var(--glass-border)"><span class="badge badge-warning">Geography</span></td></tr>
+        </tbody></table></div>
+      </div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>

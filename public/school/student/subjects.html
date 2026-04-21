@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Subjects — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#3b82f6; --role-rgb:59,130,246; }</style>
+</head>
+<body>
+  <div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo">
+        <div class="logo-icon">🎓</div>
+        <div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div>
+      </div>
+      <div class="user-info">
+        <div class="user-avatar">👩‍🎓</div>
+        <div><div class="user-name">Riya Sharma</div><div class="user-role">Student</div></div>
+      </div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link"><span class="nav-icon">📊</span>Dashboard</a>
+<a href="subjects.html" class="nav-link active"><span class="nav-icon">📚</span>My Subjects</a>
+<a href="assignments.html" class="nav-link"><span class="nav-icon">📝</span>Assignments</a>
+<a href="attendance.html" class="nav-link"><span class="nav-icon">🗓️</span>Attendance</a>
+<a href="results.html" class="nav-link"><span class="nav-icon">🏆</span>Results</a>
+<a href="learning-path.html" class="nav-link"><span class="nav-icon">🧭</span>Learning Path</a>
+<a href="mock-tests.html" class="nav-link"><span class="nav-icon">📋</span>Mock Tests</a>
+<a href="skill-profile.html" class="nav-link"><span class="nav-icon">🧬</span>Skill Profile</a>
+<a href="achievements.html" class="nav-link"><span class="nav-icon">🏅</span>Achievements</a>
+<a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a>
+<a href="profile.html" class="nav-link"><span class="nav-icon">👤</span>My Profile</a>
+</nav>
+    <div class="sidebar-footer">
+      <button class="logout-btn" onclick="showConfirm('Logout?','Are you sure you want to logout?',()=>{window.location.href='../index.html';})">🚪 Logout</button>
+    </div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">My Subjects</div><div class="page-subtitle">Subject materials & progress</div></div>
+      <div class="top-bar-right">
+        <div class="search-bar"><span>🔍</span><input placeholder="Search..."></div>
+        <button class="icon-btn" onclick="showInfo('Notifications','You have 3 new notifications.')">🔔</button>
+        <button class="icon-btn">👤</button>
+      </div>
+    </div>
+      <div class="bento-grid bento-3">        <div class="card">
+          <div class="card-header"><div style="font-size:32px">📐</div><span class="badge badge-success">A</span></div>
+          <div class="card-title" style="margin-bottom:4px">Mathematics</div>
+          <div class="card-subtitle" style="margin-bottom:14px">👩‍🏫 Mr. Rajesh Kumar</div>
+          <div class="skill-header"><span class="skill-name">Progress</span><span class="skill-pct">88%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>
+          <div style="display:flex;gap:8px;margin-top:14px">
+            <button class="btn btn-primary btn-sm" onclick="showInfo('Materials','Loading Mathematics study materials...')">📖 Materials</button>
+            <button class="btn btn-secondary btn-sm" onclick="showInfo('Notes','Mathematics notes')">📋 Notes</button>
+          </div>
+        </div>        <div class="card">
+          <div class="card-header"><div style="font-size:32px">🔬</div><span class="badge badge-success">B+</span></div>
+          <div class="card-title" style="margin-bottom:4px">Science</div>
+          <div class="card-subtitle" style="margin-bottom:14px">👩‍🏫 Ms. Priya Verma</div>
+          <div class="skill-header"><span class="skill-name">Progress</span><span class="skill-pct">79%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:79%"></div></div>
+          <div style="display:flex;gap:8px;margin-top:14px">
+            <button class="btn btn-primary btn-sm" onclick="showInfo('Materials','Loading Science study materials...')">📖 Materials</button>
+            <button class="btn btn-secondary btn-sm" onclick="showInfo('Notes','Science notes')">📋 Notes</button>
+          </div>
+        </div>        <div class="card">
+          <div class="card-header"><div style="font-size:32px">📖</div><span class="badge badge-success">A-</span></div>
+          <div class="card-title" style="margin-bottom:4px">English</div>
+          <div class="card-subtitle" style="margin-bottom:14px">👩‍🏫 Mr. Amit Singh</div>
+          <div class="skill-header"><span class="skill-name">Progress</span><span class="skill-pct">83%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:83%"></div></div>
+          <div style="display:flex;gap:8px;margin-top:14px">
+            <button class="btn btn-primary btn-sm" onclick="showInfo('Materials','Loading English study materials...')">📖 Materials</button>
+            <button class="btn btn-secondary btn-sm" onclick="showInfo('Notes','English notes')">📋 Notes</button>
+          </div>
+        </div>        <div class="card">
+          <div class="card-header"><div style="font-size:32px">🏛️</div><span class="badge badge-success">B</span></div>
+          <div class="card-title" style="margin-bottom:4px">History</div>
+          <div class="card-subtitle" style="margin-bottom:14px">👩‍🏫 Ms. Sunita Rao</div>
+          <div class="skill-header"><span class="skill-name">Progress</span><span class="skill-pct">74%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:74%"></div></div>
+          <div style="display:flex;gap:8px;margin-top:14px">
+            <button class="btn btn-primary btn-sm" onclick="showInfo('Materials','Loading History study materials...')">📖 Materials</button>
+            <button class="btn btn-secondary btn-sm" onclick="showInfo('Notes','History notes')">📋 Notes</button>
+          </div>
+        </div>        <div class="card">
+          <div class="card-header"><div style="font-size:32px">🌍</div><span class="badge badge-success">A</span></div>
+          <div class="card-title" style="margin-bottom:4px">Geography</div>
+          <div class="card-subtitle" style="margin-bottom:14px">👩‍🏫 Ms. Anjali Sharma</div>
+          <div class="skill-header"><span class="skill-name">Progress</span><span class="skill-pct">86%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:86%"></div></div>
+          <div style="display:flex;gap:8px;margin-top:14px">
+            <button class="btn btn-primary btn-sm" onclick="showInfo('Materials','Loading Geography study materials...')">📖 Materials</button>
+            <button class="btn btn-secondary btn-sm" onclick="showInfo('Notes','Geography notes')">📋 Notes</button>
+          </div>
+        </div>        <div class="card">
+          <div class="card-header"><div style="font-size:32px">💻</div><span class="badge badge-success">A+</span></div>
+          <div class="card-title" style="margin-bottom:4px">Computer Science</div>
+          <div class="card-subtitle" style="margin-bottom:14px">👩‍🏫 Mr. Vikram Nair</div>
+          <div class="skill-header"><span class="skill-name">Progress</span><span class="skill-pct">95%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div>
+          <div style="display:flex;gap:8px;margin-top:14px">
+            <button class="btn btn-primary btn-sm" onclick="showInfo('Materials','Loading Computer Science study materials...')">📖 Materials</button>
+            <button class="btn btn-secondary btn-sm" onclick="showInfo('Notes','Computer Science notes')">📋 Notes</button>
+          </div>
+        </div></div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>

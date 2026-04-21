@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#7c3aed; --role-rgb:124,58,237; }</style>
+</head>
+<body>
+  <div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo"><div class="logo-icon">🎓</div><div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div></div>
+      <div class="user-info"><div class="user-avatar" style="font-size:13px;font-weight:700">A</div><div><div class="user-name">Dr. A.K. Verma</div><div class="user-role">Admin</div></div></div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link"><span class="nav-icon">📊</span>Dashboard</a><a href="users.html" class="nav-link"><span class="nav-icon">👥</span>Users</a><a href="classes.html" class="nav-link"><span class="nav-icon">🏫</span>Classes</a><a href="subjects.html" class="nav-link"><span class="nav-icon">📚</span>Subjects</a><a href="curriculum.html" class="nav-link"><span class="nav-icon">📅</span>Curriculum</a><a href="timetable.html" class="nav-link"><span class="nav-icon">🕐</span>Timetable</a><a href="exams.html" class="nav-link"><span class="nav-icon">📋</span>Exams</a><a href="results.html" class="nav-link"><span class="nav-icon">📊</span>Results</a><a href="gradebook.html" class="nav-link"><span class="nav-icon">📒</span>Gradebook</a><a href="fees.html" class="nav-link"><span class="nav-icon">💰</span>Fees</a><a href="billing.html" class="nav-link"><span class="nav-icon">🧾</span>Billing</a><a href="behavior.html" class="nav-link"><span class="nav-icon">⚠️</span>Behavior</a><a href="counseling.html" class="nav-link"><span class="nav-icon">🧠</span>Counseling</a><a href="library.html" class="nav-link"><span class="nav-icon">📖</span>Library</a><a href="transport.html" class="nav-link"><span class="nav-icon">🚌</span>Transport</a><a href="hostel.html" class="nav-link"><span class="nav-icon">🏨</span>Hostel</a><a href="announcements.html" class="nav-link"><span class="nav-icon">📢</span>Announcements</a><a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a><a href="reports.html" class="nav-link"><span class="nav-icon">📊</span>Reports</a><a href="settings.html" class="nav-link  active"><span class="nav-icon">⚙️</span>Settings</a></nav>
+    <div class="sidebar-footer"><button class="logout-btn" onclick="showConfirm('Logout?','Are you sure?',()=>{window.location.href='../index.html';})">🚪 Logout</button></div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Settings</div><div class="page-subtitle">School configuration</div></div>
+      <div class="top-bar-right"><div class="search-bar"><span>🔍</span><input placeholder="Search..."></div><button class="icon-btn" onclick="showInfo('Notifications','3 new notifications.')">🔔</button><button class="icon-btn">👤</button></div>
+    </div>
+
+      <div class="bento-grid bento-2">
+        <div class="card">
+          <div class="section-title" style="margin-bottom:16px">School Information</div>
+          <form onsubmit="event.preventDefault();showSuccess('Settings Saved','School info updated.')">
+            <div class="form-group"><label class="form-label">School Name</label><input class="form-control" value="EduBase International School"></div>
+            <div class="form-group"><label class="form-label">Principal</label><input class="form-control" value="Dr. A.K. Verma"></div>
+            <div class="form-group"><label class="form-label">Address</label><textarea class="form-control">New Delhi - 110016</textarea></div>
+            <div class="form-group"><label class="form-label">Phone</label><input class="form-control" value="+91 11 2345 6789"></div>
+            <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" value="admin@edubase.in"></div>
+            <button type="submit" class="btn btn-primary">Save Settings</button>
+          </form>
+        </div>
+        <div class="card">
+          <div class="section-title" style="margin-bottom:16px">Academic Settings</div>
+          <form onsubmit="event.preventDefault();showSuccess('Settings Saved','Academic settings updated.')">
+            <div class="form-group"><label class="form-label">Academic Year</label><input class="form-control" value="2023-24"></div>
+            <div class="form-group"><label class="form-label">Grading System</label><select class="form-control"><option>CBSE 10-Point Grade</option><option>Percentage</option><option>Letter Grade</option></select></div>
+            <div class="form-group"><label class="form-label">Min Attendance %</label><input type="number" class="form-control" value="75"></div>
+            <div class="form-group"><label class="form-label">Fee Due Day</label><input type="number" class="form-control" value="31"></div>
+            <button type="submit" class="btn btn-primary">Save Settings</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>

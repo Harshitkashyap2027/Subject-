@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#3b82f6; --role-rgb:59,130,246; }</style>
+</head>
+<body>
+  <div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo">
+        <div class="logo-icon">🎓</div>
+        <div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div>
+      </div>
+      <div class="user-info">
+        <div class="user-avatar">👩‍🎓</div>
+        <div><div class="user-name">Riya Sharma</div><div class="user-role">Student</div></div>
+      </div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link active"><span class="nav-icon">📊</span>Dashboard</a>
+<a href="subjects.html" class="nav-link"><span class="nav-icon">📚</span>My Subjects</a>
+<a href="assignments.html" class="nav-link"><span class="nav-icon">📝</span>Assignments</a>
+<a href="attendance.html" class="nav-link"><span class="nav-icon">🗓️</span>Attendance</a>
+<a href="results.html" class="nav-link"><span class="nav-icon">🏆</span>Results</a>
+<a href="learning-path.html" class="nav-link"><span class="nav-icon">🧭</span>Learning Path</a>
+<a href="mock-tests.html" class="nav-link"><span class="nav-icon">📋</span>Mock Tests</a>
+<a href="skill-profile.html" class="nav-link"><span class="nav-icon">🧬</span>Skill Profile</a>
+<a href="achievements.html" class="nav-link"><span class="nav-icon">🏅</span>Achievements</a>
+<a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a>
+<a href="profile.html" class="nav-link"><span class="nav-icon">👤</span>My Profile</a>
+</nav>
+    <div class="sidebar-footer">
+      <button class="logout-btn" onclick="showConfirm('Logout?','Are you sure you want to logout?',()=>{window.location.href='../index.html';})">🚪 Logout</button>
+    </div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Student Dashboard</div><div class="page-subtitle">Welcome back, Riya! 👋</div></div>
+      <div class="top-bar-right">
+        <div class="search-bar"><span>🔍</span><input placeholder="Search..."></div>
+        <button class="icon-btn" onclick="showInfo('Notifications','You have 3 new notifications.')">🔔</button>
+        <button class="icon-btn">👤</button>
+      </div>
+    </div>
+      <div class="bento-grid bento-4" style="margin-bottom:20px">
+        <div class="stat-card" style="--stat-rgb:59,130,246"><div class="stat-icon">📅</div><div class="stat-value">92%</div><div class="stat-label">Attendance</div><div class="stat-change up">↑ 2% this month</div></div>
+        <div class="stat-card" style="--stat-rgb:16,185,129"><div class="stat-icon">📊</div><div class="stat-value">78</div><div class="stat-label">Avg Marks</div><div class="stat-change up">↑ 4 pts</div></div>
+        <div class="stat-card" style="--stat-rgb:245,158,11"><div class="stat-icon">📝</div><div class="stat-value">3</div><div class="stat-label">Pending Tasks</div></div>
+        <div class="stat-card" style="--stat-rgb:124,58,237"><div class="stat-icon">🏆</div><div class="stat-value">#12</div><div class="stat-label">Class Rank</div><div class="stat-change up">↑ 3 positions</div></div>
+      </div>
+      <div class="bento-grid bento-3" style="margin-bottom:20px">
+        <div class="card span-2">
+          <div class="card-title" style="margin-bottom:16px">📚 Subject Performance</div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">Mathematics</span><span class="skill-pct">88%</span></div><div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">Science</span><span class="skill-pct">79%</span></div><div class="progress-bar"><div class="progress-fill" style="width:79%"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">English</span><span class="skill-pct">83%</span></div><div class="progress-bar"><div class="progress-fill" style="width:83%"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">Computer Science</span><span class="skill-pct">95%</span></div><div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">History</span><span class="skill-pct">74%</span></div><div class="progress-bar"><div class="progress-fill" style="width:74%"></div></div></div>
+        </div>
+        <div class="card">
+          <div class="card-title" style="margin-bottom:14px">⚡ Quick Actions</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <a href="assignments.html" class="btn btn-primary" style="justify-content:center">📝 Assignments</a>
+            <a href="results.html" class="btn btn-secondary" style="justify-content:center">📊 Results</a>
+            <a href="attendance.html" class="btn btn-secondary" style="justify-content:center">🗓️ Attendance</a>
+            <a href="mock-tests.html" class="btn btn-secondary" style="justify-content:center">📋 Mock Tests</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>

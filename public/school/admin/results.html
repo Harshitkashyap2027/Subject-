@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results Processing — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#7c3aed; --role-rgb:124,58,237; }</style>
+</head>
+<body>
+  <div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo"><div class="logo-icon">🎓</div><div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div></div>
+      <div class="user-info"><div class="user-avatar" style="font-size:13px;font-weight:700">A</div><div><div class="user-name">Dr. A.K. Verma</div><div class="user-role">Admin</div></div></div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link"><span class="nav-icon">📊</span>Dashboard</a><a href="users.html" class="nav-link"><span class="nav-icon">👥</span>Users</a><a href="classes.html" class="nav-link"><span class="nav-icon">🏫</span>Classes</a><a href="subjects.html" class="nav-link"><span class="nav-icon">📚</span>Subjects</a><a href="curriculum.html" class="nav-link"><span class="nav-icon">📅</span>Curriculum</a><a href="timetable.html" class="nav-link"><span class="nav-icon">🕐</span>Timetable</a><a href="exams.html" class="nav-link"><span class="nav-icon">📋</span>Exams</a><a href="results.html" class="nav-link  active"><span class="nav-icon">📊</span>Results</a><a href="gradebook.html" class="nav-link"><span class="nav-icon">📒</span>Gradebook</a><a href="fees.html" class="nav-link"><span class="nav-icon">💰</span>Fees</a><a href="billing.html" class="nav-link"><span class="nav-icon">🧾</span>Billing</a><a href="behavior.html" class="nav-link"><span class="nav-icon">⚠️</span>Behavior</a><a href="counseling.html" class="nav-link"><span class="nav-icon">🧠</span>Counseling</a><a href="library.html" class="nav-link"><span class="nav-icon">📖</span>Library</a><a href="transport.html" class="nav-link"><span class="nav-icon">🚌</span>Transport</a><a href="hostel.html" class="nav-link"><span class="nav-icon">🏨</span>Hostel</a><a href="announcements.html" class="nav-link"><span class="nav-icon">📢</span>Announcements</a><a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a><a href="reports.html" class="nav-link"><span class="nav-icon">📊</span>Reports</a><a href="settings.html" class="nav-link"><span class="nav-icon">⚙️</span>Settings</a></nav>
+    <div class="sidebar-footer"><button class="logout-btn" onclick="showConfirm('Logout?','Are you sure?',()=>{window.location.href='../index.html';})">🚪 Logout</button></div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Results Processing</div><div class="page-subtitle">Publish and manage results</div></div>
+      <div class="top-bar-right"><div class="search-bar"><span>🔍</span><input placeholder="Search..."></div><button class="icon-btn" onclick="showInfo('Notifications','3 new notifications.')">🔔</button><button class="icon-btn">👤</button></div>
+    </div>
+
+      <div class="bento-grid bento-4" style="margin-bottom:20px">
+        <div class="stat-card"><div class="stat-icon">📊</div><div class="stat-value">84%</div><div class="stat-label">School Average</div></div>
+        <div class="stat-card"><div class="stat-icon">🏆</div><div class="stat-value">312</div><div class="stat-label">Distinction (A+)</div></div>
+        <div class="stat-card"><div class="stat-icon">✅</div><div class="stat-value">98.5%</div><div class="stat-label">Pass Rate</div></div>
+        <div class="stat-card"><div class="stat-icon">⚠️</div><div class="stat-value">19</div><div class="stat-label">Need Improvement</div></div>
+      </div>
+      <div class="card">
+        <div class="section-header"><div class="section-title">Publish Results</div><button class="btn btn-primary" onclick="showConfirm('Publish Results?','This will send results to all students and parents.',()=>showSuccess('Results Published!','All students and parents have been notified.'))">Publish All</button></div>
+        <div class="table-container"><table><thead><tr><th>Exam</th><th>Classes</th><th>Appeared</th><th>Avg Score</th><th>Published</th><th>Action</th></tr></thead><tbody>
+          <tr><td>Unit Test 1 — Math</td><td>9A, 9B</td><td>62</td><td>78%</td><td><span class="badge badge-error">No</span></td><td><button class="btn btn-primary btn-sm" onclick="showConfirm('Publish?','Publish results for Unit Test 1?',()=>showSuccess('Published!','Results sent to students.'))">Publish</button></td></tr>
+          <tr><td>Chapter 4 Quiz</td><td>9B</td><td>30</td><td>82%</td><td><span class="badge badge-success">Yes</span></td><td><button class="btn btn-secondary btn-sm" onclick="showInfo('Published','Results already published.')">View</button></td></tr>
+        </tbody></table></div>
+      </div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>
