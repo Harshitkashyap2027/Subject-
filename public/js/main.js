@@ -17,6 +17,7 @@ const NAV_HTML = `
         <li><a href="./pricing.html">Pricing</a></li>
         <li><a href="./demo.html">Demo</a></li>
         <li><a href="./ai-lab.html">AI Lab</a></li>
+        <li><a href="./school/index.html">🎓 School</a></li>
       </ul>
       <div class="navbar-actions">
         <a href="./login.html" class="btn btn-ghost btn-sm">Login</a>
@@ -36,6 +37,7 @@ const NAV_HTML = `
   <a href="./pricing.html">Pricing</a>
   <a href="./demo.html">Demo</a>
   <a href="./ai-lab.html">AI Lab</a>
+  <a href="./school/index.html">🎓 School</a>
   <a href="./integrations.html">Integrations</a>
   <a href="./about.html">About</a>
   <a href="./blog.html">Blog</a>

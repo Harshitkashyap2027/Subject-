@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Dashboard — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#10b981; --role-rgb:16,185,129; }</style>
+</head>
+<body>
+  <div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo"><div class="logo-icon">🎓</div><div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div></div>
+      <div class="user-info"><div class="user-avatar" style="font-size:13px;font-weight:700">T</div><div><div class="user-name">Mr. Rajesh Kumar</div><div class="user-role">Teacher</div></div></div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link  active"><span class="nav-icon">📊</span>Dashboard</a><a href="classes.html" class="nav-link"><span class="nav-icon">🏫</span>My Classes</a><a href="attendance-marking.html" class="nav-link"><span class="nav-icon">🗓️</span>Mark Attendance</a><a href="assignments.html" class="nav-link"><span class="nav-icon">📝</span>Assignments</a><a href="analytics.html" class="nav-link"><span class="nav-icon">📈</span>Student Analytics</a><a href="lesson-planner.html" class="nav-link"><span class="nav-icon">📅</span>Lesson Planner</a><a href="exam-creator.html" class="nav-link"><span class="nav-icon">📋</span>Exam Creator</a><a href="gradebook.html" class="nav-link"><span class="nav-icon">📒</span>Gradebook</a><a href="announcements.html" class="nav-link"><span class="nav-icon">📢</span>Announcements</a><a href="profile.html" class="nav-link"><span class="nav-icon">👤</span>My Profile</a></nav>
+    <div class="sidebar-footer"><button class="logout-btn" onclick="showConfirm('Logout?','Are you sure?',()=>{window.location.href='../index.html';})">🚪 Logout</button></div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Teacher Dashboard</div><div class="page-subtitle">Welcome, Mr. Kumar! 👋</div></div>
+      <div class="top-bar-right"><div class="search-bar"><span>🔍</span><input placeholder="Search..."></div><button class="icon-btn" onclick="showInfo('Notifications','You have 3 new notifications.')">🔔</button><button class="icon-btn">👤</button></div>
+    </div>
+
+      <div class="bento-grid bento-4" style="margin-bottom:20px">
+        <div class="stat-card" style="--stat-rgb:16,185,129"><div class="stat-icon">🏫</div><div class="stat-value">4</div><div class="stat-label">My Classes</div></div>
+        <div class="stat-card" style="--stat-rgb:59,130,246"><div class="stat-icon">👥</div><div class="stat-value">120</div><div class="stat-label">Total Students</div></div>
+        <div class="stat-card" style="--stat-rgb:245,158,11"><div class="stat-icon">📝</div><div class="stat-value">6</div><div class="stat-label">Active Assignments</div></div>
+        <div class="stat-card" style="--stat-rgb:124,58,237"><div class="stat-icon">📊</div><div class="stat-value">82%</div><div class="stat-label">Avg Class Score</div></div>
+      </div>
+      <div class="bento-grid bento-3">
+        <div class="card span-2">
+          <div class="card-title" style="margin-bottom:16px">📅 Today's Schedule</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;gap:14px;padding:12px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:12px;align-items:center"><div style="width:50px;text-align:center;font-weight:700;color:var(--teacher)">9:00</div><div style="flex:1"><div style="font-weight:600">Mathematics — 9A</div><div style="font-size:12px;color:var(--text-muted)">Quadratic Equations</div></div><span class="badge badge-success">Now</span></div>
+            <div style="display:flex;gap:14px;padding:12px;background:var(--bg-secondary);border-radius:12px;align-items:center"><div style="width:50px;text-align:center;font-weight:700">11:00</div><div style="flex:1"><div style="font-weight:600">Mathematics — 10A</div><div style="font-size:12px;color:var(--text-muted)">Trigonometry</div></div></div>
+            <div style="display:flex;gap:14px;padding:12px;background:var(--bg-secondary);border-radius:12px;align-items:center"><div style="width:50px;text-align:center;font-weight:700">1:00</div><div style="flex:1"><div style="font-weight:600">Mathematics — 9B</div><div style="font-size:12px;color:var(--text-muted)">Algebra</div></div></div>
+          </div>
+        </div>
+        <div class="card"><div class="card-title" style="margin-bottom:14px">⚡ Quick Actions</div><div style="display:flex;flex-direction:column;gap:10px">
+          <a href="attendance-marking.html" class="btn btn-primary" style="justify-content:center">✅ Mark Attendance</a>
+          <a href="assignments.html" class="btn btn-secondary" style="justify-content:center">📝 New Assignment</a>
+          <a href="gradebook.html" class="btn btn-secondary" style="justify-content:center">📒 Update Grades</a>
+          <a href="announcements.html" class="btn btn-secondary" style="justify-content:center">📢 Announce</a>
+        </div></div>
+      </div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>

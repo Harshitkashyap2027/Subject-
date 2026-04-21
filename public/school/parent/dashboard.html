@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Dashboard — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#f59e0b; --role-rgb:245,158,11; }</style>
+</head>
+<body>
+  <div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo"><div class="logo-icon">🎓</div><div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div></div>
+      <div class="user-info"><div class="user-avatar" style="font-size:13px;font-weight:700">P</div><div><div class="user-name">Mrs. Sunita Sharma</div><div class="user-role">Parent</div></div></div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link  active"><span class="nav-icon">📊</span>Dashboard</a><a href="child-performance.html" class="nav-link"><span class="nav-icon">📈</span>Child Performance</a><a href="attendance.html" class="nav-link"><span class="nav-icon">🗓️</span>Attendance</a><a href="fees.html" class="nav-link"><span class="nav-icon">💰</span>Fees Status</a><a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a><a href="profile.html" class="nav-link"><span class="nav-icon">👤</span>My Profile</a></nav>
+    <div class="sidebar-footer"><button class="logout-btn" onclick="showConfirm('Logout?','Are you sure?',()=>{window.location.href='../index.html';})">🚪 Logout</button></div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Parent Dashboard</div><div class="page-subtitle">Child Overview</div></div>
+      <div class="top-bar-right"><div class="search-bar"><span>🔍</span><input placeholder="Search..."></div><button class="icon-btn" onclick="showInfo('Notifications','You have 3 new notifications.')">🔔</button><button class="icon-btn">👤</button></div>
+    </div>
+
+      <div class="bento-grid bento-4" style="margin-bottom:20px">
+        <div class="stat-card" style="--stat-rgb:245,158,11"><div class="stat-icon">📅</div><div class="stat-value">92%</div><div class="stat-label">Attendance</div></div>
+        <div class="stat-card" style="--stat-rgb:59,130,246"><div class="stat-icon">📊</div><div class="stat-value">84%</div><div class="stat-label">Avg Score</div></div>
+        <div class="stat-card" style="--stat-rgb:16,185,129"><div class="stat-icon">✅</div><div class="stat-value">Paid</div><div class="stat-label">Q1 & Q2 Fees</div></div>
+        <div class="stat-card" style="--stat-rgb:124,58,237"><div class="stat-icon">🏆</div><div class="stat-value">#12</div><div class="stat-label">Class Rank</div></div>
+      </div>
+      <div class="bento-grid bento-3">
+        <div class="card span-2">
+          <div class="card-title" style="margin-bottom:16px">👧 Child: Riya Sharma — Class 10A</div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">📐 Mathematics</span><span class="skill-pct">88%</span></div><div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">🔬 Science</span><span class="skill-pct">79%</span></div><div class="progress-bar"><div class="progress-fill" style="width:79%"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">💻 Computer Science</span><span class="skill-pct">95%</span></div><div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">📖 English</span><span class="skill-pct">83%</span></div><div class="progress-bar"><div class="progress-fill" style="width:83%"></div></div></div>
+        </div>
+        <div class="card">
+          <div class="card-title" style="margin-bottom:14px">🔔 Recent Alerts</div>
+          <div class="notif-item"><div class="notif-dot"></div><div class="notif-content"><div class="notif-title">Exam Scheduled</div><div class="notif-msg">Mid-terms Feb 5</div><div class="notif-time">2h ago</div></div></div>
+          <div class="notif-item"><div class="notif-dot"></div><div class="notif-content"><div class="notif-title">Fee Reminder</div><div class="notif-msg">Q3 fees due Jan 31</div><div class="notif-time">1d ago</div></div></div>
+          <div class="notif-item"><div class="notif-dot read"></div><div class="notif-content"><div class="notif-title">PTM Notice</div><div class="notif-msg">Parent-Teacher Meeting Jan 28</div><div class="notif-time">3d ago</div></div></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>

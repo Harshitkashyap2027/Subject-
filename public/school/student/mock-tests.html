@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Tests — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#3b82f6; --role-rgb:59,130,246; }</style>
+</head>
+<body>
+  <div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo">
+        <div class="logo-icon">🎓</div>
+        <div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div>
+      </div>
+      <div class="user-info">
+        <div class="user-avatar">👩‍🎓</div>
+        <div><div class="user-name">Riya Sharma</div><div class="user-role">Student</div></div>
+      </div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link"><span class="nav-icon">📊</span>Dashboard</a>
+<a href="subjects.html" class="nav-link"><span class="nav-icon">📚</span>My Subjects</a>
+<a href="assignments.html" class="nav-link"><span class="nav-icon">📝</span>Assignments</a>
+<a href="attendance.html" class="nav-link"><span class="nav-icon">🗓️</span>Attendance</a>
+<a href="results.html" class="nav-link"><span class="nav-icon">🏆</span>Results</a>
+<a href="learning-path.html" class="nav-link"><span class="nav-icon">🧭</span>Learning Path</a>
+<a href="mock-tests.html" class="nav-link active"><span class="nav-icon">📋</span>Mock Tests</a>
+<a href="skill-profile.html" class="nav-link"><span class="nav-icon">🧬</span>Skill Profile</a>
+<a href="achievements.html" class="nav-link"><span class="nav-icon">🏅</span>Achievements</a>
+<a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a>
+<a href="profile.html" class="nav-link"><span class="nav-icon">👤</span>My Profile</a>
+</nav>
+    <div class="sidebar-footer">
+      <button class="logout-btn" onclick="showConfirm('Logout?','Are you sure you want to logout?',()=>{window.location.href='../index.html';})">🚪 Logout</button>
+    </div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Mock Tests</div><div class="page-subtitle">Practice exams</div></div>
+      <div class="top-bar-right">
+        <div class="search-bar"><span>🔍</span><input placeholder="Search..."></div>
+        <button class="icon-btn" onclick="showInfo('Notifications','You have 3 new notifications.')">🔔</button>
+        <button class="icon-btn">👤</button>
+      </div>
+    </div>
+      <div class="bento-grid bento-3"><div class="card">
+  <div style="font-size:36px;margin-bottom:12px">📐</div>
+  <div class="card-title" style="margin-bottom:4px">Mathematics</div>
+  <div class="card-subtitle" style="margin-bottom:12px">Chapter 5: Quadratic Equations</div>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">
+    <span class="badge badge-info">⏱️ 30 min</span>
+    <span class="badge badge-purple">25 Qs</span>
+    <span class="badge badge-warning">Medium</span>
+  </div>
+  <div style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">Not Attempted</div>
+  <button class="btn btn-primary btn-sm" style="width:100%" onclick="showConfirm('Start Test?','This is a timed test. Ready?',()=>showSuccess('Test Started!','Good luck!'))">Start →</button>
+</div><div class="card">
+  <div style="font-size:36px;margin-bottom:12px">🔬</div>
+  <div class="card-title" style="margin-bottom:4px">Science</div>
+  <div class="card-subtitle" style="margin-bottom:12px">Cell Biology</div>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">
+    <span class="badge badge-info">⏱️ 45 min</span>
+    <span class="badge badge-purple">30 Qs</span>
+    <span class="badge badge-error">Hard</span>
+  </div>
+  <div style="font-size:13px;color:var(--success);margin-bottom:12px">Score: 79%</div>
+  <button class="btn btn-primary btn-sm" style="width:100%" onclick="showConfirm('Start Test?','This is a timed test. Ready?',()=>showSuccess('Test Started!','Good luck!'))">Retake →</button>
+</div><div class="card">
+  <div style="font-size:36px;margin-bottom:12px">📖</div>
+  <div class="card-title" style="margin-bottom:4px">English</div>
+  <div class="card-subtitle" style="margin-bottom:12px">Grammar & Comprehension</div>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">
+    <span class="badge badge-info">⏱️ 30 min</span>
+    <span class="badge badge-purple">20 Qs</span>
+    <span class="badge badge-success">Easy</span>
+  </div>
+  <div style="font-size:13px;color:var(--success);margin-bottom:12px">Score: 88%</div>
+  <button class="btn btn-primary btn-sm" style="width:100%" onclick="showConfirm('Start Test?','This is a timed test. Ready?',()=>showSuccess('Test Started!','Good luck!'))">Retake →</button>
+</div><div class="card">
+  <div style="font-size:36px;margin-bottom:12px">💻</div>
+  <div class="card-title" style="margin-bottom:4px">CS</div>
+  <div class="card-subtitle" style="margin-bottom:12px">Python Basics</div>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">
+    <span class="badge badge-info">⏱️ 40 min</span>
+    <span class="badge badge-purple">20 Qs</span>
+    <span class="badge badge-warning">Medium</span>
+  </div>
+  <div style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">Not Attempted</div>
+  <button class="btn btn-primary btn-sm" style="width:100%" onclick="showConfirm('Start Test?','This is a timed test. Ready?',()=>showSuccess('Test Started!','Good luck!'))">Start →</button>
+</div><div class="card">
+  <div style="font-size:36px;margin-bottom:12px">🏛️</div>
+  <div class="card-title" style="margin-bottom:4px">History</div>
+  <div class="card-subtitle" style="margin-bottom:12px">Medieval India</div>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">
+    <span class="badge badge-info">⏱️ 35 min</span>
+    <span class="badge badge-purple">25 Qs</span>
+    <span class="badge badge-warning">Medium</span>
+  </div>
+  <div style="font-size:13px;color:var(--success);margin-bottom:12px">Score: 74%</div>
+  <button class="btn btn-primary btn-sm" style="width:100%" onclick="showConfirm('Start Test?','This is a timed test. Ready?',()=>showSuccess('Test Started!','Good luck!'))">Retake →</button>
+</div><div class="card">
+  <div style="font-size:36px;margin-bottom:12px">🌍</div>
+  <div class="card-title" style="margin-bottom:4px">Geography</div>
+  <div class="card-subtitle" style="margin-bottom:12px">River Systems</div>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">
+    <span class="badge badge-info">⏱️ 25 min</span>
+    <span class="badge badge-purple">20 Qs</span>
+    <span class="badge badge-success">Easy</span>
+  </div>
+  <div style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">Not Attempted</div>
+  <button class="btn btn-primary btn-sm" style="width:100%" onclick="showConfirm('Start Test?','This is a timed test. Ready?',()=>showSuccess('Test Started!','Good luck!'))">Start →</button>
+</div></div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>

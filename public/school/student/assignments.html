@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignments — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#3b82f6; --role-rgb:59,130,246; }</style>
+</head>
+<body>
+  <div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo">
+        <div class="logo-icon">🎓</div>
+        <div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div>
+      </div>
+      <div class="user-info">
+        <div class="user-avatar">👩‍🎓</div>
+        <div><div class="user-name">Riya Sharma</div><div class="user-role">Student</div></div>
+      </div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link"><span class="nav-icon">📊</span>Dashboard</a>
+<a href="subjects.html" class="nav-link"><span class="nav-icon">📚</span>My Subjects</a>
+<a href="assignments.html" class="nav-link active"><span class="nav-icon">📝</span>Assignments</a>
+<a href="attendance.html" class="nav-link"><span class="nav-icon">🗓️</span>Attendance</a>
+<a href="results.html" class="nav-link"><span class="nav-icon">🏆</span>Results</a>
+<a href="learning-path.html" class="nav-link"><span class="nav-icon">🧭</span>Learning Path</a>
+<a href="mock-tests.html" class="nav-link"><span class="nav-icon">📋</span>Mock Tests</a>
+<a href="skill-profile.html" class="nav-link"><span class="nav-icon">🧬</span>Skill Profile</a>
+<a href="achievements.html" class="nav-link"><span class="nav-icon">🏅</span>Achievements</a>
+<a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a>
+<a href="profile.html" class="nav-link"><span class="nav-icon">👤</span>My Profile</a>
+</nav>
+    <div class="sidebar-footer">
+      <button class="logout-btn" onclick="showConfirm('Logout?','Are you sure you want to logout?',()=>{window.location.href='../index.html';})">🚪 Logout</button>
+    </div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Assignments</div><div class="page-subtitle">View and submit homework</div></div>
+      <div class="top-bar-right">
+        <div class="search-bar"><span>🔍</span><input placeholder="Search..."></div>
+        <button class="icon-btn" onclick="showInfo('Notifications','You have 3 new notifications.')">🔔</button>
+        <button class="icon-btn">👤</button>
+      </div>
+    </div>
+      <div class="card"><div class="section-header"><div class="section-title">📝 All Assignments</div></div><div class="table-container"><table><thead><tr><th>Subject</th><th>Title</th><th>Due</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>Mathematics</td><td style="font-weight:500">Quadratic Equations Practice Set</td><td>Jan 20</td><td><span class="badge badge-warning">Pending</span></td><td><button class="btn btn-primary btn-sm" onclick="showConfirm('Submit?','Once submitted, you cannot edit it.',()=>showSuccess('Submitted!','Assignment submitted successfully.'))">Submit</button></td></tr><tr><td>Science</td><td style="font-weight:500">Cell Division Diagram</td><td>Jan 18</td><td><span class="badge badge-info">Submitted</span></td><td><span style="font-size:13px">18/25</span></td></tr><tr><td>English</td><td style="font-weight:500">Essay: My Role Model</td><td>Jan 15</td><td><span class="badge badge-success">Graded</span></td><td><span style="font-size:13px">22/25</span></td></tr><tr><td>Computer Science</td><td style="font-weight:500">Python Calculator Program</td><td>Jan 22</td><td><span class="badge badge-warning">Pending</span></td><td><button class="btn btn-primary btn-sm" onclick="showConfirm('Submit?','Once submitted, you cannot edit it.',()=>showSuccess('Submitted!','Assignment submitted successfully.'))">Submit</button></td></tr><tr><td>History</td><td style="font-weight:500">Ancient Civilizations Summary</td><td>Jan 14</td><td><span class="badge badge-success">Graded</span></td><td><span style="font-size:13px">19/25</span></td></tr><tr><td>Geography</td><td style="font-weight:500">Map Activity — River Systems</td><td>Jan 25</td><td><span class="badge badge-warning">Pending</span></td><td><button class="btn btn-primary btn-sm" onclick="showConfirm('Submit?','Once submitted, you cannot edit it.',()=>showSuccess('Submitted!','Assignment submitted successfully.'))">Submit</button></td></tr></tbody></table></div></div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>

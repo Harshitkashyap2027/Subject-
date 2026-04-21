@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Behavior Tracking — EduBase School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/school.css">
+  <style>:root { --role-color:#7c3aed; --role-rgb:124,58,237; }</style>
+</head>
+<body>
+  <div class="app-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="school-logo"><div class="logo-icon">🎓</div><div><div class="school-name">EduBase</div><div style="font-size:10px;color:var(--text-muted)">School System</div></div></div>
+      <div class="user-info"><div class="user-avatar" style="font-size:13px;font-weight:700">A</div><div><div class="user-name">Dr. A.K. Verma</div><div class="user-role">Admin</div></div></div>
+    </div>
+    <nav class="sidebar-nav"><a href="dashboard.html" class="nav-link"><span class="nav-icon">📊</span>Dashboard</a><a href="users.html" class="nav-link"><span class="nav-icon">👥</span>Users</a><a href="classes.html" class="nav-link"><span class="nav-icon">🏫</span>Classes</a><a href="subjects.html" class="nav-link"><span class="nav-icon">📚</span>Subjects</a><a href="curriculum.html" class="nav-link"><span class="nav-icon">📅</span>Curriculum</a><a href="timetable.html" class="nav-link"><span class="nav-icon">🕐</span>Timetable</a><a href="exams.html" class="nav-link"><span class="nav-icon">📋</span>Exams</a><a href="results.html" class="nav-link"><span class="nav-icon">📊</span>Results</a><a href="gradebook.html" class="nav-link"><span class="nav-icon">📒</span>Gradebook</a><a href="fees.html" class="nav-link"><span class="nav-icon">💰</span>Fees</a><a href="billing.html" class="nav-link"><span class="nav-icon">🧾</span>Billing</a><a href="behavior.html" class="nav-link  active"><span class="nav-icon">⚠️</span>Behavior</a><a href="counseling.html" class="nav-link"><span class="nav-icon">🧠</span>Counseling</a><a href="library.html" class="nav-link"><span class="nav-icon">📖</span>Library</a><a href="transport.html" class="nav-link"><span class="nav-icon">🚌</span>Transport</a><a href="hostel.html" class="nav-link"><span class="nav-icon">🏨</span>Hostel</a><a href="announcements.html" class="nav-link"><span class="nav-icon">📢</span>Announcements</a><a href="notifications.html" class="nav-link"><span class="nav-icon">🔔</span>Notifications</a><a href="reports.html" class="nav-link"><span class="nav-icon">📊</span>Reports</a><a href="settings.html" class="nav-link"><span class="nav-icon">⚙️</span>Settings</a></nav>
+    <div class="sidebar-footer"><button class="logout-btn" onclick="showConfirm('Logout?','Are you sure?',()=>{window.location.href='../index.html';})">🚪 Logout</button></div>
+  </aside>
+    <main class="main-content">
+    <div class="top-bar">
+      <div><div class="page-title">Behavior Tracking</div><div class="page-subtitle">Discipline logs</div></div>
+      <div class="top-bar-right"><div class="search-bar"><span>🔍</span><input placeholder="Search..."></div><button class="icon-btn" onclick="showInfo('Notifications','3 new notifications.')">🔔</button><button class="icon-btn">👤</button></div>
+    </div>
+
+      <div class="bento-grid bento-3">
+        <div class="card span-2">
+          <div class="section-title" style="margin-bottom:16px">Behavior Records</div>
+          <div class="table-container"><table><thead><tr><th>Student</th><th>Class</th><th>Incident</th><th>Date</th><th>Severity</th><th>Status</th></tr></thead><tbody>
+            <tr><td>Rahul Gupta</td><td>9A</td><td>Late submission 3 times</td><td>Jan 12</td><td><span class="badge badge-warning">Minor</span></td><td><span class="badge badge-info">Warned</span></td></tr>
+            <tr><td>Sanjay Kumar</td><td>10A</td><td>Disruptive behavior in class</td><td>Jan 10</td><td><span class="badge badge-error">Moderate</span></td><td><span class="badge badge-warning">Parent Notified</span></td></tr>
+            <tr><td>Amit Verma</td><td>8B</td><td>Missing uniform 5 times</td><td>Jan 8</td><td><span class="badge badge-warning">Minor</span></td><td><span class="badge badge-success">Resolved</span></td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="card">
+          <div class="section-title" style="margin-bottom:16px">Log Incident</div>
+          <form onsubmit="event.preventDefault();showSuccess('Incident Logged','Behavior record added.')">
+            <div class="form-group"><label class="form-label">Student</label><select class="form-control"><option>Rahul Gupta - 9A</option><option>Arjun Patel - 10A</option></select></div>
+            <div class="form-group"><label class="form-label">Incident Type</label><select class="form-control"><option>Late Submission</option><option>Disruptive Behavior</option><option>Absenteeism</option><option>Other</option></select></div>
+            <div class="form-group"><label class="form-label">Severity</label><select class="form-control"><option>Minor</option><option>Moderate</option><option>Severe</option></select></div>
+            <div class="form-group"><label class="form-label">Notes</label><textarea class="form-control" rows="3" placeholder="Details..."></textarea></div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Log Incident</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/firebase-school.js"></script>
+  <script src="../js/school-app.js"></script>
+  <script></script>
+</body>
+</html>
