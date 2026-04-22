@@ -1,5 +1,5 @@
 const notifications = [
-  { id: 1, category: 'Attendance', icon: '⚠️', title: 'Low Attendance Warning', message: 'Rahul\'s attendance in Computer Networks has dropped to 78%. Minimum required is 75%.', time: '2 hours ago', read: false, color: 'border-amber-500/20 bg-amber-500/5' },
+  { id: 1, category: 'Attendance', icon: '⚠️', title: 'Low Attendance Warning', message: "Rahul's attendance in Computer Networks has dropped to 78%. Minimum required is 75%.", time: '2 hours ago', read: false, color: 'border-amber-500/20 bg-amber-500/5' },
   { id: 2, category: 'Academic', icon: '📊', title: 'Mid-Term Results Published', message: 'Semester 5 mid-term results are now available. Rahul scored 88% overall.', time: '1 day ago', read: false, color: 'border-blue-500/20 bg-blue-500/5' },
   { id: 3, category: 'Fee', icon: '💰', title: 'Fee Payment Reminder', message: 'Semester 6 fees of ₹68,000 are due on January 10, 2025.', time: '2 days ago', read: true, color: 'border-red-500/20 bg-red-500/5' },
   { id: 4, category: 'Events', icon: '🎉', title: 'Annual Tech Fest - Technova 2025', message: 'University annual technical festival will be held from Jan 20-22, 2025. Students can register teams.', time: '3 days ago', read: true, color: 'border-violet-500/20 bg-violet-500/5' },
