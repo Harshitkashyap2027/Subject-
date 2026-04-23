@@ -15,6 +15,7 @@ const navLinks = [
   { href: '/pricing', label: 'Pricing' },
   { href: '/demo', label: 'Demo' },
   { href: '/ai-lab', label: 'AI Lab' },
+  { href: '/university', label: '🏫 University' },
 ]
 
 export default function Navbar() {
